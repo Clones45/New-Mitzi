@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sell Your Home Fast in Howard County | Ellicott City Listing Agent – Mitzi Santayana</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Sell your Howard County or Ellicott City home for top dollar with REALTOR® Mitzi Santayana. Strategic marketing, professional staging, and expert negotiation to maximize your sale price." />
+  <meta name="geo.region" content="US-MD">
+  <meta name="geo.placename" content="Ellicott City, Maryland">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <link rel="preload" href="assets/hero-home.png" as="image">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/call-widget.css">
+
+  <link rel="canonical" href="https://mitzisantayana.com/sell-with-mitzi" />
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="/" class="logo">
+        <img src="/assets/favicon.png" alt="Mitzi Santayana Ellicott City Realtor Logo" class="nav-logo">
+        Mitzi Santayana <span class="logo-subtitle">REALTOR®</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="/about" class="nav-link">About</a>
+        <a href="/services" class="nav-link">Services</a>
+        <a href="/listings" class="nav-link">Listings</a>
+        <a href="/#testimonials" class="nav-link">Testimonials</a>
+        <a href="/contact" class="nav-link">Contact</a>
+        <a href="/contact" class="btn btn-primary nav-btn">Work With Mitzi</a>
+        <button id="theme-toggle" class="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+
+      <button class="mobile-menu-btn" aria-label="Open Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero"
+    style="min-height:60vh;background-image:url('assets/hero-home.png');background-size:cover;background-position:center;">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content text-center">
+      <h1 class="hero-title fade-in-up">Sell Your Howard County Home for Top Dollar</h1>
+      <p class="hero-subtitle fade-in-up delay-1">Ellicott City's #1 Listing Agent – Strategic Marketing & Expert
+        Negotiation</p>
+      <a href="https://mitzisantayana.boblucidoteam.com/valuation" target="_blank"
+        class="btn btn-primary fade-in-up delay-2">
+        Get a Free Home Valuation
+      </a>
+    </div>
+  </header>
+
+  <!-- SELLING PROCESS -->
+  <section class="section bg-cream" id="selling-process">
+    <div class="container">
+      <h2 class="section-title text-center">The Selling Process</h2>
+      <div class="divider-center"></div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>1. Market Analysis</h3>
+          <p>I provide a precise valuation and pricing strategy to attract serious buyers.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="card-icon"><i class="fas fa-camera"></i></div>
+          <h3>2. Prepare & Showcase</h3>
+          <p>Professional staging, photography, and videography.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="card-icon"><i class="fas fa-bullhorn"></i></div>
+          <h3>3. Strategic Marketing</h3>
+          <p>Your home gets maximum exposure online.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="card-icon"><i class="fas fa-hand-holding-usd"></i></div>
+          <h3>4. Negotiate & Close</h3>
+          <p>I manage negotiations & closing for best results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOME EVALUATION MODAL -->
+  <div class="home-eval-modal" id="homeEvalModal">
+    <div class="home-eval-content">
+      <button class="close-eval-modal" id="closeEvalModal" aria-label="Close Home Evaluation Modal">✕</button>
+
+      <h2>Get Your Home Valuation</h2>
+      <p>Unlock the true potential of your property with a personalized home evaluation.</p>
+
+      <form id="homeEvalForm" action="home-evaluation.php" method="POST">
+
+        <!-- Honeypot -->
+        <input type="text" name="website_url" style="display:none">
+
+        <div class="form-group">
+          <input type="text" name="full_name" required>
+          <label>Full Name</label>
+        </div>
+
+        <div class="form-group">
+          <input type="tel" name="phone_number" required>
+          <label>Phone Number</label>
+        </div>
+
+        <div class="form-group">
+          <input type="email" name="email" required>
+          <label>Email Address</label>
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="property_address" required>
+          <label>Property Address</label>
+        </div>
+
+        <div class="form-group">
+          <textarea name="message"></textarea>
+          <label>Message (Optional)</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block home-eval-submit">
+          REQUEST HOME EVALUATION
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- SUCCESS MESSAGE -->
+  <div class="success-popup" id="successPopup">
+    <div class="success-content">
+      <i class="fas fa-check-circle check-animation"></i>
+      <h3>Submitted Successfully</h3>
+      <p>We will contact you shortly.</p>
+    </div>
+  </div>
+
+  <!-- LUXURY ALERT MODAL -->
+  <div class="luxury-alert-overlay" id="luxuryAlertOverlay">
+    <div class="luxury-alert-modal">
+      <div class="alert-icon-wrapper">
+        <div class="alert-icon error" id="alertIcon">
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+      </div>
+      <h3 class="alert-title" id="alertTitle">Attention</h3>
+      <p class="alert-message" id="alertMessage">Something went wrong. Please try again.</p>
+      <button class="alert-btn" id="closeAlertBtn">Close</button>
+    </div>
+  </div>
+
+  <div class="call-float" id="callFloat">
+    <i class="fas fa-phone"></i>
+  </div>
+
+  <div class="call-modal" id="callModal">
+    <div class="call-modal-content">
+      <button class="close-modal" id="closeModal">✕</button>
+      <h2>Do you have questions?</h2>
+      <p>Call or text today, we are here to help!</p>
+      <a href="tel:4439004056" class="call-btn">
+        <i class="fa fa-phone"></i> 443-900-4056
+      </a>
+      <small>
+        I agree to be contacted by Mitzi Santayana via text, call & email.
+      </small>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+
+  <div id="footer-static">
+    <footer class="footer">
+      <!-- TOP CTA AREA -->
+      <div class="footer-cta">
+        <h2>Ready to Find Your Home?</h2>
+        <p>
+          Let's start your journey together. Reach out today and experience
+          the difference of working with a REALTOR® who truly cares.
+        </p>
+        <a href="contact.html" class="footer-btn">
+          Get in Touch
+        </a>
+      </div>
+
+      <!-- MAIN FOOTER CONTENT -->
+      <div class="footer-main">
+        <div class="footer-grid">
+          <!-- BRAND -->
+          <div class="footer-brand">
+            <h3>Mitzi Santayana</h3>
+            <span class="realtor">REALTOR®</span>
+            <p>Guiding You Home with Heart and Expertise</p>
+          </div>
+
+          <!-- QUICK LINKS -->
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/services">Services</a>
+            <a href="/listings">Listings</a>
+            <a href="/contact">Contact</a>
+            <a href="/howard-county">Howard County</a>
+            <a href="/anne-arundel-county">Anne Arundel County</a>
+            <a href="/prince-georges-county">Prince George's County</a>
+          </div>
+
+          <!-- CONTACT -->
+          <div class="footer-contact">
+            <h4>Get in Touch</h4>
+            <p><i class="fas fa-building"></i> (410) 465-6900</p>
+            <p>📞 (443) 900-4056</p>
+            <p>✉️ mitzisantayana@boblucidoteam.com</p>
+            <div class="footer-socials">
+              <a href="https://www.facebook.com/mitzi.santayana" target="_blank">
+                <img src="icons/facebook.png" alt="Facebook" class="social-icon">
+              </a>
+              <a href="https://www.instagram.com/missrealt0r/" target="_blank">
+                <img src="icons/instagram.png" alt="Instagram" class="social-icon">
+              </a>
+              <a href="https://www.tiktok.com/@missrealt0r" target="_blank">
+                <img src="icons/tiktok.png" alt="TikTok" class="social-icon">
+              </a>
+              <a href="https://www.threads.com/@missrealt0r" target="_blank">
+                <img src="icons/threads.png" alt="Threads" class="social-icon">
+              </a>
+            </div>
+            <div class="footer-logo" style="margin-top: 25px; text-align: left;">
+              <a href="https://www.boblucidoteam.com" target="_blank">
+                <img src="assets/BL.png" alt="Bob Lucido Team" style="max-width: 200px; height: auto;">
+              </a>
+            </div>
+            <div style="margin-top: 15px;">
+              <img src="assets/REALTOR and EHO.png" alt="REALTOR® and Equal Housing Opportunity"
+                style="max-width: 160px; height: auto; opacity: 0.85;">
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-line"></div>
+        <p class="copyright">
+          © 2025 Mitzi Santayana. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const modal = document.getElementById('homeEvalModal');
+      const openBtn = document.getElementById('openEvalBtn');
+      const closeBtn = document.getElementById('closeEvalModal');
+      const form = document.getElementById('homeEvalForm');
+      const successPopup = document.getElementById('successPopup');
+
+      const alertOverlay = document.getElementById('luxuryAlertOverlay');
+      const alertTitle = document.getElementById('alertTitle');
+      const alertMessage = document.getElementById('alertMessage');
+      const closeAlertBtn = document.getElementById('closeAlertBtn');
+      const alertIcon = document.getElementById('alertIcon');
+
+      function showLuxAlert(title, message, type = 'error') {
+        alertTitle.textContent = title;
+        alertMessage.textContent = message;
+
+        if (type === 'success') {
+          alertIcon.className = 'alert-icon success';
+          alertIcon.innerHTML = '<i class="fas fa-check"></i>';
+        } else {
+          alertIcon.className = 'alert-icon error';
+          alertIcon.innerHTML = '<i class="fas fa-exclamation-triangle"></i>';
+        }
+
+        alertOverlay.classList.add('active');
+      }
+
+      closeAlertBtn.addEventListener('click', () => {
+        alertOverlay.classList.remove('active');
+      });
+
+      openBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+
+      closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const phoneInput = form.querySelector('input[name="phone_number"]');
+        const phoneValue = phoneInput.value.trim();
+        const phoneRegex = /^[0-9+\-\s()]{7,20}$/;
+
+        if (!phoneRegex.test(phoneValue)) {
+          showLuxAlert('Invalid Phone Number', 'Please enter a valid phone number.', 'error');
+          return;
+        }
+
+        const formData = new FormData(form);
+
+        fetch('home-evaluation.php', {
+          method: 'POST',
+          body: formData
+        })
+          .then(res => res.json())
+          .then(data => {
+            if (data.status === 'success') {
+              modal.classList.remove('active');
+              document.body.style.overflow = '';
+              form.reset();
+              showSuccess();
+            } else {
+              showLuxAlert('Submission Failed', data.message || 'Please try again.', 'error');
+            }
+          })
+          .catch(() => {
+            showLuxAlert('Network Error', 'Unable to send request. Please check your connection.', 'error');
+          });
+      });
+
+      function showSuccess() {
+        successPopup.classList.add('glow-gold');
+
+        setTimeout(() => {
+          successPopup.classList.remove('glow-gold');
+
+          const section = document.getElementById('selling-process');
+          if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+          }
+
+        }, 1000);
+      }
+    });
+  </script>
+</body>
+
+</html>

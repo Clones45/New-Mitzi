@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>802 203rd St | Mitzi Santayana REALTOR®</title>
+    <meta name="description"
+        content="For Sale: $400,000 - 3 Bed, 2 Bath Split-Foyer in Pasadena, MD. Contact Mitzi Santayana for a showing." />
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/call-widget.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="canonical" href="https://mitzisantayana.com/listing-pasadena" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+
+    <style>
+        /* Lightbox Styles */
+        .photo-lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 85vh;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 10001;
+        }
+
+        .lightbox-prev,
+        .lightbox-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 30px;
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            padding: 20px;
+            cursor: pointer;
+            z-index: 10001;
+            transition: background 0.3s;
+        }
+
+        .lightbox-prev:hover,
+        .lightbox-next:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .lightbox-prev {
+            left: 20px;
+        }
+
+        .lightbox-next {
+            right: 20px;
+        }
+
+        .lightbox-counter {
+            color: white;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                <img src="/assets/favicon.png" alt="Mitzi Santayana Ellicott City Realtor Logo" class="nav-logo">
+                Mitzi Santayana <span class="logo-subtitle">REALTOR®</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="/about" class="nav-link">About</a>
+                <a href="/services" class="nav-link">Services</a>
+                <a href="/listings" class="nav-link active">Listings</a>
+                <a href="/#testimonials" class="nav-link">Testimonials</a>
+                <a href="/contact" class="nav-link">Contact</a>
+                <a href="/contact" class="btn btn-primary nav-btn">Work With Mitzi</a>
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Open Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- PHOTO COLLAGE HERO -->
+    <div class="property-hero-collage">
+        <div class="collage-main">
+            <img src="Ps/P1.jpeg" alt="802 203rd St Front" class="collage-img">
+        </div>
+        <div class="collage-sub">
+            <img src="Ps/P2.jpeg" alt="Interior" class="collage-img">
+        </div>
+        <div class="collage-sub">
+            <img src="Ps/P3.jpeg" alt="Kitchen" class="collage-img">
+        </div>
+        <div class="collage-sub">
+            <img src="Ps/P4.jpeg" alt="Living Area" class="collage-img">
+        </div>
+        <div class="collage-sub">
+            <img src="Ps/P5.jpeg" alt="Bedroom" class="collage-img">
+        </div>
+        <button class="view-gallery-btn" onclick="openLightbox()">
+            <i class="fas fa-th"></i> View all photos
+        </button>
+    </div>
+
+    <div class="property-container">
+        <div class="property-main">
+            <div class="property-header">
+                <div class="prop-status">
+                    <span class="prop-badge"></span> For Sale
+                </div>
+                <div class="prop-price">$400,000</div>
+                <h1 class="prop-address">
+                    802 203rd St
+                    <span>Pasadena, MD 21122</span>
+                </h1>
+
+                <div class="prop-stats">
+                    <div class="prop-stat">
+                        <i class="fas fa-bed"></i> <strong>3</strong> bd
+                    </div>
+                    <div class="prop-stat">
+                        <i class="fas fa-bath"></i> <strong>2</strong> ba
+                    </div>
+                    <div class="prop-stat">
+                        <i class="fas fa-ruler-combined"></i> <strong>1,794</strong> sq ft
+                    </div>
+                </div>
+
+                <div style="margin-top: 15px; color: var(--color-text-light); font-size: 0.95rem;">
+                    MLS#: MDAA2128840
+                </div>
+            </div>
+
+            <div class="property-description-section">
+                <h2 class="prop-section-title">About this home</h2>
+                <div class="prop-description">
+                    Charming split-foyer residence offering 3 bedrooms, 2 bathrooms, and 1,794 finished square feet just
+                    steps from the water in sought-after Green Haven. Ascend from the foyer to the bright main level
+                    featuring an open floor plan and laminate flooring throughout. The combined living and dining room
+                    flows seamlessly into the crisp white kitchen, complete with upgraded countertops, stainless steel
+                    appliances, and a classic white subway tile backsplash.
+
+                    Down the hall are three comfortable bedrooms and a full bathroom, including a spacious primary
+                    bedroom. Both secondary bedrooms feature luxury vinyl tile for added style and durability.
+
+                    The expansive lower level offers even more living space, beginning with a large family room
+                    featuring a decorative fireplace and walk-up exterior access. Through French doors, a versatile
+                    bonus room awaits, perfect for guests, a home office, or a quiet study. A stunning full bathroom
+                    showcases an oversized shower with dual rainfall showerheads, and a dedicated storage room with
+                    laundry facilities completes the level.
+
+                    Outside, enjoy a fully fenced backyard with a patio, ideal for relaxing, entertaining, or outdoor
+                    play. Additional highlights include no HOA, offering more freedom and fewer restrictions.
+                </div>
+
+                <h2 class="prop-section-title">Key Features</h2>
+                <div class="features-list">
+                    <div class="feature-item">Built in 1999</div>
+                    <div class="feature-item">Split-Foyer</div>
+                    <div class="feature-item">3 Bedrooms</div>
+                    <div class="feature-item">2 Bathrooms</div>
+                    <div class="feature-item">1,794 Finished Sq Ft</div>
+                    <div class="feature-item">Green Haven Community</div>
+                    <div class="feature-item">Steps from Water</div>
+                    <div class="feature-item">Open Floor Plan</div>
+                    <div class="feature-item">Stainless Steel Appliances</div>
+                    <div class="feature-item">Finished Lower Level</div>
+                    <div class="feature-item">Dual Rainfall Showerheads</div>
+                    <div class="feature-item">Fenced Backyard</div>
+                    <div class="feature-item">No HOA</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: CONTACT SIDEBAR -->
+        <div class="contact-card">
+            <h3>Schedule a Showing</h3>
+            <p>Interested in this property? Contact Mitzi today to schedule a private tour.</p>
+
+            <a href="/contact" class="contact-btn">
+                Request a Tour
+            </a>
+
+            <div style="margin-top: 20px; text-align: center; font-size: 0.9rem;">
+                <a href="tel:4439004056" style="color: var(--color-black); text-decoration: none;">
+                    <i class="fas fa-phone"></i> (443) 900-4056
+                </a>
+            </div>
+            <div class="footer-logo" style="margin-top: 25px; text-align: left;">
+                <a href="https://www.boblucidoteam.com" target="_blank">
+                    <img src="assets/BL.png" alt="Bob Lucido Team" style="max-width: 200px; height: auto;">
+                </a>
+            </div>
+            <div style="margin-top: 15px;">
+                <img src="assets/REALTOR and EHO.png" alt="REALTOR® and Equal Housing Opportunity"
+                    style="max-width: 160px; height: auto; opacity: 0.85;">
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PHOTO LIGHTBOX MODAL -->
+    <div id="photoLightbox" class="photo-lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-prev" onclick="changePhoto(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-next" onclick="changePhoto(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="Property Photo">
+            <div class="lightbox-counter">
+                <span id="currentPhoto">1</span> / <span id="totalPhotos">37</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER LOAD -->
+    <div id="footer-static">
+        <footer class="footer">
+            <!-- TOP CTA AREA -->
+            <div class="footer-cta">
+                <h2>Ready to Find Your Home?</h2>
+                <p>
+                    Let's start your journey together. Reach out today and experience
+                    the difference of working with a REALTOR® who truly cares.
+                </p>
+                <a href="/contact" class="footer-btn">
+                    Get in Touch
+                </a>
+            </div>
+
+            <!-- MAIN FOOTER CONTENT -->
+            <div class="footer-main">
+                <div class="footer-grid">
+                    <!-- BRAND -->
+                    <div class="footer-brand">
+                        <h3>Mitzi Santayana</h3>
+                        <span class="realtor">REALTOR®</span>
+                        <p>Guiding You Home with Heart and Expertise</p>
+                    </div>
+
+                    <!-- QUICK LINKS -->
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <a href="/">Home</a>
+                        <a href="/about">About</a>
+                        <a href="/services">Services</a>
+                        <a href="/listings">Listings</a>
+                        <a href="/contact">Contact</a>
+                    </div>
+
+                    <!-- CONTACT -->
+                    <div class="footer-contact">
+                        <h4>Get in Touch</h4>
+                        <p>📞 (443) 900-4056</p>
+                        <p>✉️ mitzisantayana@boblucidoteam.com</p>
+                        <div class="footer-socials">
+                            <a href="https://www.facebook.com/mitzi.santayana" target="_blank">
+                                <img src="icons/facebook.png" alt="Facebook" class="social-icon">
+                            </a>
+                            <a href="https://www.instagram.com/missrealt0r/" target="_blank">
+                                <img src="icons/instagram.png" alt="Instagram" class="social-icon">
+                            </a>
+                            <a href="https://www.tiktok.com/@missrealt0r" target="_blank">
+                                <img src="icons/tiktok.png" alt="TikTok" class="social-icon">
+                            </a>
+                            <a href="https://www.threads.com/@missrealt0r" target="_blank">
+                                <img src="icons/threads.png" alt="Threads" class="social-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-line"></div>
+                <p class="copyright">
+                    © 2025 Mitzi Santayana. All rights reserved.
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- FLOATING CALL WIDGET -->
+    <div class="call-float" id="callFloat">
+        <i class="fas fa-phone"></i>
+    </div>
+
+    <!-- CALL MODAL -->
+    <div class="call-modal" id="callModal">
+        <div class="call-modal-content">
+            <button class="close-modal" id="closeModal">✕</button>
+
+            <h2>Do you have questions?</h2>
+            <p>Call or text today, we are here to help!</p>
+
+            <a href="tel:4439004056" class="call-btn">
+                <i class="fa fa-phone"></i> 443-900-4056
+            </a>
+
+            <small>
+                I agree to be contacted by Mitzi Santayana via text, call & email.
+                To opt-out, reply "STOP" or click unsubscribe.
+            </small>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+
+    <script>
+        // Photo lightbox functionality - All 37 photos
+        const photos = [
+            'Ps/P1.jpeg', 'Ps/P2.jpeg', 'Ps/P3.jpeg', 'Ps/P4.jpeg', 'Ps/P5.jpeg',
+            'Ps/P6.jpeg', 'Ps/P7.jpeg', 'Ps/P8.jpeg', 'Ps/P9.jpeg', 'Ps/P10.jpeg',
+            'Ps/P11.jpeg', 'Ps/P12.jpeg', 'Ps/P13.jpeg', 'Ps/P14.jpeg', 'Ps/P15.jpeg',
+            'Ps/P16.jpeg', 'Ps/P17.jpeg', 'Ps/P18.jpeg', 'Ps/P19.jpeg', 'Ps/P20.jpeg',
+            'Ps/P21.jpeg', 'Ps/P22.jpeg', 'Ps/P23.jpeg', 'Ps/P24.jpeg', 'Ps/P25.jpeg',
+            'Ps/P26.jpeg', 'Ps/P27.jpeg', 'Ps/P28.jpeg', 'Ps/P29.jpeg', 'Ps/P30.jpeg',
+            'Ps/P31.jpeg', 'Ps/P32.jpeg', 'Ps/P33.jpeg', 'Ps/P34.jpeg', 'Ps/P35.jpeg',
+            'Ps/P36.jpeg', 'Ps/P37.jpeg'
+        ];
+
+        let currentPhotoIndex = 0;
+
+        function openLightbox() {
+            currentPhotoIndex = 0;
+            showPhoto(currentPhotoIndex);
+            document.getElementById('photoLightbox').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('photoLightbox').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function changePhoto(direction) {
+            currentPhotoIndex += direction;
+
+            if (currentPhotoIndex >= photos.length) {
+                currentPhotoIndex = 0;
+            } else if (currentPhotoIndex < 0) {
+                currentPhotoIndex = photos.length - 1;
+            }
+
+            showPhoto(currentPhotoIndex);
+        }
+
+        function showPhoto(index) {
+            document.getElementById('lightboxImage').src = photos[index];
+            document.getElementById('currentPhoto').textContent = index + 1;
+            document.getElementById('totalPhotos').textContent = photos.length;
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function (e) {
+            const lightbox = document.getElementById('photoLightbox');
+            if (lightbox.style.display === 'flex') {
+                if (e.key === 'ArrowLeft') {
+                    changePhoto(-1);
+                } else if (e.key === 'ArrowRight') {
+                    changePhoto(1);
+                } else if (e.key === 'Escape') {
+                    closeLightbox();
+                }
+            }
+        });
+
+        // Close lightbox when clicking outside the image
+        document.getElementById('photoLightbox').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

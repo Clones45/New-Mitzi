@@ -1,0 +1,16 @@
+# robots.txt for mitzisantayana.com
+# Last updated: 2026-02-20
+
+User-agent: *
+Allow: /
+
+# Block private/non-public directories
+Disallow: /.private/
+Disallow: /phpmailer/
+Disallow: /.env
+Disallow: /rate_limit.json
+Disallow: /home-evaluation.php
+Disallow: /contact.php
+
+# Sitemap location
+Sitemap: https://mitzisantayana.com/sitemap.xml

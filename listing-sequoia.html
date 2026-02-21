@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>2632 Sequoia Ln | Mitzi Santayana REALTOR®</title>
+    <meta name="description"
+        content="For Sale: $650,000 - 4 Bed, 3.5 Bath Luxury Townhome in Gambrills, MD. Contact Mitzi Santayana for a showing." />
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/call-widget.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="canonical" href="https://mitzisantayana.com/listing-sequoia" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+
+    <style>
+        /* Lightbox Styles */
+        .photo-lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 85vh;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 10001;
+        }
+
+        .lightbox-prev,
+        .lightbox-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 30px;
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            padding: 20px;
+            cursor: pointer;
+            z-index: 10001;
+            transition: background 0.3s;
+        }
+
+        .lightbox-prev:hover,
+        .lightbox-next:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .lightbox-prev {
+            left: 20px;
+        }
+
+        .lightbox-next {
+            right: 20px;
+        }
+
+        .lightbox-counter {
+            color: white;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                <img src="/assets/favicon.png" alt="Mitzi Santayana Ellicott City Realtor Logo" class="nav-logo">
+                Mitzi Santayana <span class="logo-subtitle">REALTOR®</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="/about" class="nav-link">About</a>
+                <a href="/services" class="nav-link">Services</a>
+                <a href="/listings" class="nav-link active">Listings</a>
+                <a href="/#testimonials" class="nav-link">Testimonials</a>
+                <a href="/contact" class="nav-link">Contact</a>
+                <a href="/contact" class="btn btn-primary nav-btn">Work With Mitzi</a>
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Open Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- PHOTO COLLAGE HERO -->
+    <div class="property-hero-collage">
+        <div class="collage-main">
+            <img src="Sequoia/S1.jpeg" alt="2632 Sequoia Ln Front" class="collage-img">
+        </div>
+        <div class="collage-sub">
+            <img src="Sequoia/S2.jpeg" alt="Interior" class="collage-img">
+        </div>
+        <div class="collage-sub">
+            <img src="Sequoia/S3.jpeg" alt="Kitchen" class="collage-img">
+        </div>
+        <div class="collage-sub">
+            <img src="Sequoia/S4.jpeg" alt="Living Area" class="collage-img">
+        </div>
+        <div class="collage-sub">
+            <img src="Sequoia/S5.jpeg" alt="Bedroom" class="collage-img">
+        </div>
+        <button class="view-gallery-btn" onclick="openLightbox()">
+            <i class="fas fa-th"></i> View all photos
+        </button>
+    </div>
+
+    <div class="property-container">
+        <div class="property-main">
+            <div class="property-header">
+                <div class="prop-status">
+                    <span class="prop-badge"></span> Under Contract
+                </div>
+                <div class="prop-price">$650,000</div>
+                <h1 class="prop-address">
+                    2632 Sequoia Ln
+                    <span>Gambrills, MD 21054</span>
+                </h1>
+
+                <div class="prop-stats">
+                    <div class="prop-stat">
+                        <i class="fas fa-bed"></i> <strong>4</strong> bd
+                    </div>
+                    <div class="prop-stat">
+                        <i class="fas fa-bath"></i> <strong>3.5</strong> ba
+                    </div>
+                    <div class="prop-stat">
+                        <i class="fas fa-ruler-combined"></i> <strong>1,958</strong> sq ft
+                    </div>
+                </div>
+
+                <div style="margin-top: 15px; color: var(--color-text-light); font-size: 0.95rem;">
+                    MLS#: MDAA2130104
+                </div>
+            </div>
+
+            <div class="property-description-section">
+                <h2 class="prop-section-title">About this home</h2>
+                <div class="prop-description">
+                    Multiple offers received. Deadline 6PM Monday. Stunning Garrett I model townhouse residence, built
+                    in 2020 by K. Hovnanian Homes, offering 4 bedrooms, 3.5 bathrooms, and 2,659 finished square feet in
+                    the vibrant Village at Waugh Chapel. The entry-level foyer leads into a versatile recreation room
+                    that can serve as an in-law/au pair suite, featuring a private full bathroom, a sitting area, a
+                    walk-in closet, and walk-out access to the backyard.
+
+                    The main level showcases an expansive open-concept great room, including a sun-filled living room
+                    with a contemporary accent wall and a formal dining area with a modern chandelier. A stylish powder
+                    room sits nearby.
+
+                    The updated eat-in kitchen features granite countertops, an oversized central island with breakfast
+                    bar seating, subway tile backsplash, a built-in desk, white cabinetry, stainless steel appliances
+                    including double ovens and a beverage refrigerator, a pantry, and deck access. Nearby is a versatile
+                    office/den with sliding barn doors.
+
+                    The upper level includes three bedrooms, including a spacious owner’s suite with two walk-in closets
+                    and a luxurious bathroom with dual vanities, a glass-enclosed shower, and water closet. Secondary
+                    bedrooms have accent walls. Laundry is on this level.
+
+                    Exterior features include a 2-car garage, rear deck, covered patio, fenced yard, and stepping
+                    stones. Residents enjoy community amenities such as tot lots and walking areas, all while being
+                    close to Waugh Chapel shopping and dining.
+                </div>
+
+                <h2 class="prop-section-title">Key Features</h2>
+                <div class="features-list">
+                    <div class="feature-item">Built in 2020</div>
+                    <div class="feature-item">Garrett I Model</div>
+                    <div class="feature-item">In-law/Au Pair Suite Potential</div>
+                    <div class="feature-item">Open-Concept Great Room</div>
+                    <div class="feature-item">Gourmet Kitchen</div>
+                    <div class="feature-item">Granite Countertops</div>
+                    <div class="feature-item">Double Ovens</div>
+                    <div class="feature-item">Office/Den with Barn Doors</div>
+                    <div class="feature-item">Owner's Suite with 2 Walk-in Closets</div>
+                    <div class="feature-item">2-Car Garage</div>
+                    <div class="feature-item">Rear Deck & Covered Patio</div>
+                    <div class="feature-item">Fenced Yard</div>
+                    <div class="feature-item">Close to Waugh Chapel Shopping</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: CONTACT SIDEBAR -->
+        <div class="contact-card">
+            <h3>Schedule a Showing</h3>
+            <p>Interested in this property? Contact Mitzi today to schedule a private tour.</p>
+
+            <a href="/contact" class="contact-btn">
+                Request a Tour
+            </a>
+
+            <div style="margin-top: 20px; text-align: center; font-size: 0.9rem;">
+                <a href="tel:4439004056" style="color: var(--color-black); text-decoration: none;">
+                    <i class="fas fa-phone"></i> (443) 900-4056
+                </a>
+            </div>
+            <div class="footer-logo" style="margin-top: 25px; text-align: left;">
+                <a href="https://www.boblucidoteam.com" target="_blank">
+                    <img src="assets/BL.png" alt="Bob Lucido Team" style="max-width: 200px; height: auto;">
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PHOTO LIGHTBOX MODAL -->
+    <div id="photoLightbox" class="photo-lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-prev" onclick="changePhoto(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-next" onclick="changePhoto(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="Property Photo">
+            <div class="lightbox-counter">
+                <span id="currentPhoto">1</span> / <span id="totalPhotos">43</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER LOAD -->
+    <div id="footer-static">
+        <footer class="footer">
+            <!-- TOP CTA AREA -->
+            <div class="footer-cta">
+                <h2>Ready to Find Your Home?</h2>
+                <p>
+                    Let's start your journey together. Reach out today and experience
+                    the difference of working with a REALTOR® who truly cares.
+                </p>
+                <a href="/contact" class="footer-btn">
+                    Get in Touch
+                </a>
+            </div>
+
+            <!-- MAIN FOOTER CONTENT -->
+            <div class="footer-main">
+                <div class="footer-grid">
+                    <!-- BRAND -->
+                    <div class="footer-brand">
+                        <h3>Mitzi Santayana</h3>
+                        <span class="realtor">REALTOR®</span>
+                        <p>Guiding You Home with Heart and Expertise</p>
+                    </div>
+
+                    <!-- QUICK LINKS -->
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <a href="/">Home</a>
+                        <a href="/about">About</a>
+                        <a href="/services">Services</a>
+                        <a href="/listings">Listings</a>
+                        <a href="/contact">Contact</a>
+                    </div>
+
+                    <!-- CONTACT -->
+                    <div class="footer-contact">
+                        <h4>Get in Touch</h4>
+                        <p><i class="fas fa-building"></i> (410) 465-6900</p>
+                        <p>📞 (443) 900-4056</p>
+                        <p>✉️ mitzisantayana@boblucidoteam.com</p>
+                        <div class="footer-socials">
+                            <a href="https://www.facebook.com/mitzi.santayana" target="_blank">
+                                <img src="icons/facebook.png" alt="Facebook" class="social-icon">
+                            </a>
+                            <a href="https://www.instagram.com/missrealt0r/" target="_blank">
+                                <img src="icons/instagram.png" alt="Instagram" class="social-icon">
+                            </a>
+                            <a href="https://www.tiktok.com/@missrealt0r" target="_blank">
+                                <img src="icons/tiktok.png" alt="TikTok" class="social-icon">
+                            </a>
+                            <a href="https://www.threads.com/@missrealt0r" target="_blank">
+                                <img src="icons/threads.png" alt="Threads" class="social-icon">
+                            </a>
+                        </div>
+                        <div class="footer-logo" style="margin-top: 25px; text-align: left;">
+                            <a href="https://www.boblucidoteam.com" target="_blank">
+                                <img src="assets/BL.png" alt="Bob Lucido Team" style="max-width: 200px; height: auto;">
+                            </a>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <img src="assets/REALTOR and EHO.png" alt="REALTOR® and Equal Housing Opportunity"
+                                style="max-width: 160px; height: auto; opacity: 0.85;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-line"></div>
+                <p class="copyright">
+                    © 2025 Mitzi Santayana. All rights reserved.
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- FLOATING CALL WIDGET -->
+    <div class="call-float" id="callFloat">
+        <i class="fas fa-phone"></i>
+    </div>
+
+    <!-- CALL MODAL -->
+    <div class="call-modal" id="callModal">
+        <div class="call-modal-content">
+            <button class="close-modal" id="closeModal">✕</button>
+
+            <h2>Do you have questions?</h2>
+            <p>Call or text today, we are here to help!</p>
+
+            <a href="tel:4439004056" class="call-btn">
+                <i class="fa fa-phone"></i> 443-900-4056
+            </a>
+
+            <small>
+                I agree to be contacted by Mitzi Santayana via text, call & email.
+                To opt-out, reply "STOP" or click unsubscribe.
+            </small>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+
+    <script>
+        // Photo lightbox functionality - All 43 photos
+        const photos = [
+            'Sequoia/S1.jpeg', 'Sequoia/S2.jpeg', 'Sequoia/S3.jpeg', 'Sequoia/S4.jpeg', 'Sequoia/S5.jpeg',
+            'Sequoia/S6.jpeg', 'Sequoia/S7.jpeg', 'Sequoia/S8.jpeg', 'Sequoia/S9.jpeg', 'Sequoia/S10.jpeg',
+            'Sequoia/S11.jpeg', 'Sequoia/S12.jpeg', 'Sequoia/S13.jpeg', 'Sequoia/S14.jpeg', 'Sequoia/S15.jpeg',
+            'Sequoia/S16.jpeg', 'Sequoia/S17.jpeg', 'Sequoia/S18.jpeg', 'Sequoia/S19.jpeg', 'Sequoia/S20.jpeg',
+            'Sequoia/S21.jpeg', 'Sequoia/S22.jpeg', 'Sequoia/S23.jpeg', 'Sequoia/S24.jpeg', 'Sequoia/S25.jpeg',
+            'Sequoia/S26.jpeg', 'Sequoia/S27.jpeg', 'Sequoia/S28.jpeg', 'Sequoia/S29.jpeg', 'Sequoia/S30.jpeg',
+            'Sequoia/S31.jpeg', 'Sequoia/S32.jpeg', 'Sequoia/S33.jpeg', 'Sequoia/S34.jpeg', 'Sequoia/S35.jpeg',
+            'Sequoia/S36.jpeg', 'Sequoia/S37.jpeg', 'Sequoia/S38.jpeg', 'Sequoia/S39.jpeg', 'Sequoia/S40.jpeg',
+            'Sequoia/S41.jpeg', 'Sequoia/S42.jpeg', 'Sequoia/S43.jpeg'
+        ];
+
+        let currentPhotoIndex = 0;
+
+        function openLightbox() {
+            currentPhotoIndex = 0;
+            showPhoto(currentPhotoIndex);
+            document.getElementById('photoLightbox').style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeLightbox() {
+            document.getElementById('photoLightbox').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        function changePhoto(direction) {
+            currentPhotoIndex += direction;
+
+            // Loop around if at the end/beginning
+            if (currentPhotoIndex >= photos.length) {
+                currentPhotoIndex = 0;
+            } else if (currentPhotoIndex < 0) {
+                currentPhotoIndex = photos.length - 1;
+            }
+
+            showPhoto(currentPhotoIndex);
+        }
+
+        function showPhoto(index) {
+            document.getElementById('lightboxImage').src = photos[index];
+            document.getElementById('currentPhoto').textContent = index + 1;
+            document.getElementById('totalPhotos').textContent = photos.length;
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function (e) {
+            const lightbox = document.getElementById('photoLightbox');
+            if (lightbox.style.display === 'flex') {
+                if (e.key === 'ArrowLeft') {
+                    changePhoto(-1);
+                } else if (e.key === 'ArrowRight') {
+                    changePhoto(1);
+                } else if (e.key === 'Escape') {
+                    closeLightbox();
+                }
+            }
+        });
+
+        // Close lightbox when clicking outside the image
+        document.getElementById('photoLightbox').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+    </script>
+
+    <!-- MOBILE STICKY ACTION BAR -->
+    <div class="mobile-bottom-actions">
+        <a href="/contact" class="mobile-action-btn action-btn-primary">Request a tour</a>
+        <a href="/contact" class="mobile-action-btn action-btn-secondary">Contact agent</a>
+    </div>
+
+</body>
+
+</html>

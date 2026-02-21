@@ -1,0 +1,177 @@
+/* ============================
+   LUXURY TESTIMONIAL SLIDER
+============================= */
+
+.testimonials-section {
+  padding: 100px 0;
+  background: var(--color-linen, #faf6ef);
+  position: relative;
+}
+
+/* Title area */
+.testimonials-section .section-title {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.testimonial-slider-wrapper {
+  max-width: 900px;
+  margin: 60px auto 0;
+  position: relative;
+  padding: 0 40px;
+}
+
+/* SLIDER CONTAINER */
+.testimonial-slider {
+  position: relative;
+  min-height: 260px;
+}
+
+/* EACH SLIDE */
+.testimonial-slide {
+  display: none;
+  text-align: center;
+  padding: 10px 30px;
+  animation: fadeIn 0.8s ease;
+}
+
+.testimonial-slide.active {
+  display: block;
+}
+
+/* ⭐ STARS – luxury gradient */
+.stars {
+  font-size: 1.5rem;
+  letter-spacing: 6px;
+  margin-bottom: 25px;
+
+  background: linear-gradient(
+    120deg,
+    #cfa95f,
+    #f6d98f,
+    #b9872c
+  );
+  background-clip: text;              /* ✅ added for compatibility */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* QUOTE TEXT */
+.quote {
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.8;
+  color: var(--color-text-light, #444);
+  max-width: 720px;
+  margin: 0 auto 30px;
+}
+
+/* AUTHOR */
+.author {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-black, #111);
+}
+
+/* ============================
+   ARROWS (PREV / NEXT)
+============================= */
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(200, 150, 80, 0.12);
+  color: #b38737;
+  border: 1px solid rgba(180, 140, 50, 0.4);
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  backdrop-filter: blur(4px);
+}
+
+/* LEFT */
+.slider-btn.prev {
+  left: -20px;
+}
+
+/* RIGHT */
+.slider-btn.next {
+  right: -20px;
+}
+
+/* HOVER EFFECT */
+.slider-btn:hover {
+  background: #b3882f;
+  color: white;
+  box-shadow: 0 0 14px rgba(197, 160, 89, 0.6);
+  transform: translateY(-50%) scale(1.08);
+}
+
+/* ============================
+   FADE ANIMATION
+============================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================
+   MOBILE FIX
+============================= */
+
+@media (max-width: 768px) {
+  .testimonial-slider-wrapper {
+    padding: 0 15px;
+  }
+
+  .quote {
+    font-size: 1rem;
+  }
+
+  .slider-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+  }
+
+  .slider-btn.prev {
+    left: -5px;
+  }
+
+  .slider-btn.next {
+    right: -5px;
+  }
+}
+
+/* ============================
+   LEAVE A REVIEW BUTTON
+============================= */
+.testimonial-btn {
+  border-color: var(--color-gold);
+  color: var(--color-black);
+  padding: 14px 35px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.testimonial-btn:hover {
+  background-color: var(--color-gold);
+  color: white;
+  box-shadow: 0 10px 25px rgba(197, 160, 89, 0.3);
+  transform: translateY(-3px);
+}
+

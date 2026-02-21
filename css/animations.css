@@ -1,0 +1,839 @@
+/*
+ * Mitzi Santayana – Luxury Real Estate
+ * ======================================
+ * FULL ANIMATION SYSTEM
+ * 1. Interactive Hover Effects
+ * 2. Parallax Scrolling ("Depth" Effect)
+ * 3. Reveal Animations ("Narrative" Effect)
+ * 4. Sticky Nav & Back-to-Top ("Control" Effect)
+ * 5. "Vibe" Effect (ambient motion)
+ * 6. Page Transition ("Relaxation" Effect)
+ */
+
+/* ============================================================
+   PAGE TRANSITION OVERLAY ("Relaxation Effect")
+   A full-screen curtain that fades in on page-load and out
+   on page-away, giving a silk-curtain feel.
+============================================================ */
+#page-transition {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: var(--color-cream);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#page-transition.entering {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* ============================================================
+   REVEAL ANIMATIONS ("Narrative" Effect)
+   Applied to any element with .reveal, .reveal-left,
+   .reveal-right, .reveal-scale — triggered by scroll.
+============================================================ */
+
+/* Base hidden state (set via JS so no-JS still works) */
+.reveal,
+.reveal-left,
+.reveal-right,
+.reveal-scale,
+.reveal-stagger>* {
+    opacity: 0;
+    will-change: opacity, transform;
+    transition:
+        opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal {
+    transform: translateY(50px);
+}
+
+.reveal-left {
+    transform: translateX(-60px);
+}
+
+.reveal-right {
+    transform: translateX(60px);
+}
+
+.reveal-scale {
+    transform: scale(0.88);
+}
+
+/* Stagger children */
+.reveal-stagger>* {
+    transform: translateY(40px);
+}
+
+.reveal-stagger>*:nth-child(1) {
+    transition-delay: 0.00s;
+}
+
+.reveal-stagger>*:nth-child(2) {
+    transition-delay: 0.10s;
+}
+
+.reveal-stagger>*:nth-child(3) {
+    transition-delay: 0.20s;
+}
+
+.reveal-stagger>*:nth-child(4) {
+    transition-delay: 0.30s;
+}
+
+.reveal-stagger>*:nth-child(5) {
+    transition-delay: 0.40s;
+}
+
+.reveal-stagger>*:nth-child(6) {
+    transition-delay: 0.50s;
+}
+
+/* Visible state — JS adds .is-visible */
+.reveal.is-visible,
+.reveal-left.is-visible,
+.reveal-right.is-visible,
+.reveal-scale.is-visible,
+.reveal-stagger.is-visible>* {
+    opacity: 1;
+    transform: none;
+}
+
+/* Legacy .fade-in-up support (existing markup) */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity 1.0s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 1.0s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade-in-up.visible,
+.fade-in-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-text {
+    opacity: 0;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    transition: 1.4s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.reveal-text.visible,
+.reveal-text.is-visible {
+    opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Delay helpers */
+.delay-1 {
+    transition-delay: 0.12s !important;
+}
+
+.delay-2 {
+    transition-delay: 0.24s !important;
+}
+
+.delay-3 {
+    transition-delay: 0.36s !important;
+}
+
+.delay-4 {
+    transition-delay: 0.48s !important;
+}
+
+
+/* ============================================================
+   PARALLAX DEPTH EFFECT
+   .parallax-section wraps a .parallax-bg img/div.
+   Speed controlled via data-parallax-speed (JS).
+============================================================ */
+.parallax-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-bg {
+    position: absolute;
+    inset: -15%;
+    /* over-size so movement doesn't reveal edges */
+    width: 100%;
+    height: 130%;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    z-index: 0;
+}
+
+/* Hero bg parallax */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: -12%;
+    background: inherit;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    z-index: 0;
+    display: none;
+    /* handled via JS inline transform on .hero */
+}
+
+
+/* ============================================================
+   INTERACTIVE HOVER EFFECTS
+============================================================ */
+
+/* 1 – Cards: lift + glow */
+.service-card,
+.testimonial-card,
+.additional-service-card,
+.service-showcase-card {
+    transition:
+        transform 0.40s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.40s ease,
+        border-color 0.40s ease !important;
+}
+
+.service-card:hover,
+.testimonial-card:hover,
+.additional-service-card:hover {
+    transform: translateY(-12px) !important;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* 2 – Images: gentle zoom inside container */
+.service-showcase-image,
+.story-image,
+.about-hero-image {
+    transition: transform 0.7s cubic-bezier(0.34, 1, 0.64, 1) !important;
+    overflow: hidden;
+}
+
+.service-showcase-card:hover .service-showcase-image {
+    transform: scale(1.04) !important;
+}
+
+/* 3 – Buttons: shimmer sweep on hover */
+.btn,
+.btn-primary,
+.btn-outline,
+.footer-btn,
+.services-cta-btn,
+.service-cta-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after,
+.btn-primary::after,
+.btn-outline::after,
+.footer-btn::after,
+.services-cta-btn::after,
+.service-cta-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.25) 50%,
+            transparent 100%);
+    transition: left 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.btn:hover::after,
+.btn-primary:hover::after,
+.btn-outline:hover::after,
+.footer-btn:hover::after,
+.services-cta-btn:hover::after,
+.service-cta-btn:hover::after {
+    left: 140%;
+}
+
+/* 4 – Nav links: gold underline slide */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-gold);
+    transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 1px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* 5 – Section titles: word-by-word color shift on hover */
+.section-title {
+    transition: color 0.4s ease;
+}
+
+.section-title:hover {
+    color: var(--color-gold);
+}
+
+/* 6 – Social icons: bounce */
+.social-icon,
+.footer-socials a img {
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease !important;
+}
+
+.footer-socials a:hover img,
+.social-icon:hover {
+    transform: translateY(-5px) scale(1.15) !important;
+    filter: brightness(1.1) !important;
+}
+
+/* 7 – Profile image: gold pulse ring on hover */
+.profile-image-container {
+    transition: box-shadow 0.4s ease;
+}
+
+.profile-image-container:hover {
+    box-shadow: 0 0 0 6px rgba(197, 160, 89, 0.3), 0 0 50px rgba(197, 160, 89, 0.5);
+}
+
+/* 8 – Card icon spin 90° on card hover */
+.service-card:hover .card-icon i {
+    animation: iconSpin 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes iconSpin {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(-15deg) scale(1.2);
+    }
+
+    to {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+
+/* ============================================================
+   STICKY NAV ENHANCEMENTS (controlled via JS .scrolled class)
+============================================================ */
+.navbar {
+    transition: top 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease, background 0.4s ease !important;
+}
+
+.navbar.scrolled {
+    top: 8px !important;
+    padding: 0.45rem 1.8rem !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+}
+
+[data-theme="dark"] .navbar.scrolled {
+    background: rgba(20, 20, 20, 0.98) !important;
+}
+
+
+/* ============================================================
+   BACK-TO-TOP BUTTON
+============================================================ */
+#back-to-top {
+    position: fixed;
+    bottom: 100px;
+    right: 28px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--color-black);
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    z-index: 998;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#back-to-top:hover {
+    background: var(--color-gold);
+    transform: translateY(-4px);
+}
+
+
+/* ============================================================
+   "VIBE" EFFECT — Ambient Motion
+   - Floating particles (canvas via JS)
+   - Subtle radial cursor glow that follows mouse
+   - Gentle background hue shift on hero
+============================================================ */
+
+/* Cursor follower glow */
+#cursor-glow {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    background: radial-gradient(circle,
+            rgba(197, 160, 89, 0.07) 0%,
+            transparent 70%);
+    transform: translate(-50%, -50%);
+    transition: left 0.18s ease, top 0.18s ease;
+    will-change: left, top;
+}
+
+/* Floating ambient particles canvas */
+#vibe-canvas {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.55;
+}
+
+/* Hero scroll fade — hero fades slightly as you scroll away */
+.hero-content {
+    transition: opacity 0.1s linear;
+}
+
+/* Pulsing gold accent on section dividers */
+.divider-center,
+.divider-left {
+    position: relative;
+    overflow: visible;
+    animation: dividerPulse 3s ease-in-out infinite;
+}
+
+@keyframes dividerPulse {
+
+    0%,
+    100% {
+        box-shadow: none;
+    }
+
+    50% {
+        box-shadow: 0 0 12px rgba(197, 160, 89, 0.5);
+    }
+}
+
+/* Overline letter-spacing breathe */
+.overline {
+    animation: overlineBreathe 4s ease-in-out infinite;
+}
+
+@keyframes overlineBreathe {
+
+    0%,
+    100% {
+        letter-spacing: 3px;
+    }
+
+    50% {
+        letter-spacing: 4px;
+    }
+}
+
+/* Shimmer keyframe (used by float widget) */
+@keyframes shimmer {
+    100% {
+        left: 100%;
+    }
+}
+
+/* Float keyframe (used by profile image) */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Scroll line animation (hero indicator) */
+@keyframes scrollLine {
+    0% {
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+
+    50% {
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+
+    51% {
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+
+    100% {
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
+}
+
+/* ============================================================
+   RIPPLE EFFECT (on buttons & cards click/tap)
+============================================================ */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    transform: scale(0);
+    animation: rippleAnim 0.65s linear;
+    pointer-events: none;
+}
+
+@keyframes rippleAnim {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* ============================================================
+   NAVBAR OPACITY TRANSITION (for hide-on-scroll)
+============================================================ */
+.navbar {
+    transition:
+        top 0.4s ease,
+        padding 0.4s ease,
+        box-shadow 0.4s ease,
+        background 0.4s ease,
+        opacity 0.35s ease !important;
+}
+
+/* ============================================================
+   GLOBAL RESPONSIVE FIXES — ALL DEVICES
+   Fixes inline grids, oversized text, and mobile interactions
+============================================================ */
+
+/* ── Tablet (≤1024px) ── */
+@media (max-width: 1024px) {
+
+    .hero-title,
+    .hero-title h1 {
+        font-size: 3.2rem !important;
+    }
+
+    .section-title {
+        font-size: 2.4rem !important;
+    }
+
+    .navbar {
+        width: 97% !important;
+        padding: 0.7rem 1.4rem !important;
+    }
+
+    /* Collapse 2-col story grids to single col on tablet */
+    .story-container,
+    .two-col-grid,
+    [style*="grid-template-columns:1fr 1fr"],
+    [style*="grid-template-columns: 1fr 1fr"] {
+        display: block !important;
+    }
+
+    .story-container>div+div,
+    .two-col-grid>div+div,
+    [style*="grid-template-columns:1fr 1fr"]>div+div,
+    [style*="grid-template-columns: 1fr 1fr"]>div+div {
+        margin-top: 2rem;
+    }
+}
+
+/* ── Mobile (≤768px) ── */
+@media (max-width: 768px) {
+
+    /* --- Hero --- */
+    .hero {
+        min-height: 100svh !important;
+        min-height: 100vh !important;
+    }
+
+    .hero-content {
+        padding: 100px 1rem 2rem !important;
+        max-width: 100% !important;
+    }
+
+    .hero-title {
+        font-size: 2.2rem !important;
+        line-height: 1.25 !important;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem !important;
+    }
+
+    .profile-image-container {
+        width: 130px !important;
+        height: 130px !important;
+    }
+
+    /* --- Sections --- */
+    .section {
+        padding: 3.5rem 0 !important;
+    }
+
+    .section-title {
+        font-size: 1.9rem !important;
+    }
+
+    /* --- Story / 2-col grid collapse --- */
+    .story-container,
+    [style*="grid-template-columns:1fr 1fr"],
+    [style*="grid-template-columns: 1fr 1fr"] {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem !important;
+    }
+
+    .story-container img,
+    [style*="grid-template-columns:1fr 1fr"] img,
+    [style*="grid-template-columns: 1fr 1fr"] img {
+        width: 100% !important;
+        margin-top: 1rem;
+    }
+
+    /* --- Service cards: always 1 col on mobile --- */
+    .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    .service-card {
+        padding: 2rem 1.5rem !important;
+    }
+
+    /* --- Testimonial grid --- */
+    .testimonials-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* --- Navbar (floating pill) --- */
+    .navbar {
+        top: 10px !important;
+        width: 96% !important;
+        padding: 0.6rem 1.2rem !important;
+        border-radius: 16px !important;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        width: 100%;
+        background: var(--color-white);
+        border-radius: 12px;
+        padding: 1rem;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+        gap: 0.75rem;
+        border: 1px solid var(--color-beige);
+    }
+
+    [data-theme="dark"] .nav-links {
+        background: #1a1a1a;
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-link {
+        font-size: 1rem !important;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--color-beige);
+    }
+
+    [data-theme="dark"] .nav-link {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    .btn.nav-btn {
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
+    /* Hamburger bars animate to X */
+    .mobile-menu-btn.open .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .mobile-menu-btn.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-btn.open .bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* --- Buttons --- */
+    .btn,
+    .btn-primary,
+    .btn-outline {
+        min-height: 48px;
+        /* touch target */
+        padding: 0.85rem 1.8rem !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* CTA side-by-side → stacked */
+    .section .container .btn+.btn {
+        margin-left: 0 !important;
+        margin-top: 1rem;
+        display: inline-block;
+    }
+
+    /* --- Footer --- */
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer-socials {
+        justify-content: center !important;
+    }
+
+    .footer-logo {
+        text-align: center !important;
+    }
+
+    .footer-cta h2 {
+        font-size: 1.6rem !important;
+    }
+
+    /* --- Back to top lower on mobile (above call widget) --- */
+    #back-to-top {
+        bottom: 90px !important;
+        right: 18px !important;
+    }
+
+    /* --- Vibe canvas: disable on mobile for perf --- */
+    #vibe-canvas {
+        display: none;
+    }
+
+    /* --- Reveal: reduce travel distance on mobile --- */
+    .reveal {
+        transform: translateY(25px);
+    }
+
+    .reveal-left {
+        transform: translateX(-30px);
+    }
+
+    .reveal-right {
+        transform: translateX(30px);
+    }
+
+    /* County page specific */
+    .county-hero-title {
+        font-size: 1.9rem !important;
+    }
+}
+
+/* ── Small phone (≤480px) ── */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.75rem !important;
+    }
+
+    .section-title {
+        font-size: 1.6rem !important;
+    }
+
+    .container {
+        padding: 0 1rem !important;
+    }
+
+    .profile-image-container {
+        width: 110px !important;
+        height: 110px !important;
+    }
+
+    .realtor-badge {
+        font-size: 0.75rem !important;
+        letter-spacing: 2px !important;
+        padding: 4px 14px !important;
+    }
+}
+
+/* ── Ensure reveal works on mobile too (no opacity: 0 on small screens for .reveal items not yet mounted) ── */
+@media (max-width: 480px) {
+
+    /* Give a slightly quicker fade so small screens feel snappy */
+    .reveal,
+    .reveal-left,
+    .reveal-right,
+    .reveal-scale,
+    .reveal-stagger>* {
+        transition-duration: 0.6s !important;
+    }
+}
+
+/* ── Touch devices: disable hover shimmer/transform on pure touch ── */
+@media (hover: none) and (pointer: coarse) {
+
+    .btn::after,
+    .btn-primary::after,
+    .btn-outline::after,
+    .footer-btn::after,
+    .services-cta-btn::after,
+    .service-cta-btn::after {
+        display: none;
+        /* No shimmer sweep on touch */
+    }
+
+    .service-card:hover,
+    .testimonial-card:hover,
+    .additional-service-card:hover {
+        transform: none !important;
+        /* No hover lift on touch */
+    }
+
+    #cursor-glow {
+        display: none;
+        /* No cursor glow on touch */
+    }
+}
