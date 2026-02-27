@@ -352,6 +352,7 @@
             showLuxuryAlert('Success!', 'Your message has been sent successfully. I will get back to you soon!', 'success');
             form.reset();
           } else {
+            console.error("Web3Forms Error:", data.message);
             showLuxuryAlert('Oops!', 'Something went wrong. Please try again or contact me directly.', 'error');
           }
         })
