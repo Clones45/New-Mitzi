@@ -124,10 +124,15 @@
       <h2>Get Your Home Valuation</h2>
       <p>Unlock the true potential of your property with a personalized home evaluation.</p>
 
-      <form id="homeEvalForm" action="home-evaluation.php" method="POST">
+      <form id="homeEvalForm" action="https://api.web3forms.com/submit" method="POST">
+
+        <!-- Web3Forms Hidden Inputs -->
+        <input type="hidden" name="access_key" value="51fe746a-7b3d-4c74-bef1-2e2fcb02f0b7">
+        <input type="hidden" name="subject" value="New Home Evaluation Request">
+        <input type="hidden" name="from_name" value="Mitzi Website Lead">
 
         <!-- Honeypot -->
-        <input type="text" name="website_url" style="display:none">
+        <input type="checkbox" name="botcheck" style="display:none">
 
         <div class="form-group">
           <input type="text" name="full_name" required>
@@ -340,13 +345,13 @@
 
         const formData = new FormData(form);
 
-        fetch('home-evaluation.php', {
+        fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           body: formData
         })
           .then(res => res.json())
           .then(data => {
-            if (data.status === 'success') {
+            if (data.success) {
               modal.classList.remove('active');
               document.body.style.overflow = '';
               form.reset();

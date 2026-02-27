@@ -140,7 +140,10 @@
 
         <h3 class="form-title">Send a Message</h3>
 
-        <form class="lux-form" id="contact-form">
+        <form class="lux-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="51fe746a-7b3d-4c74-bef1-2e2fcb02f0b7">
+          <input type="hidden" name="subject" value="New Website Lead - Mitzi Santayana">
+          <input type="hidden" name="from_name" value="Mitzi Website Lead">
 
           <div class="form-group">
             <label for="name">Full Name *</label>
@@ -339,13 +342,13 @@
 
       const form = this;
 
-      fetch("contact.php", {
+      fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: new FormData(form)
       })
-        .then(response => response.text())
+        .then(response => response.json())
         .then(data => {
-          if (data.trim() === "success") {
+          if (data.success) {
             showLuxuryAlert('Success!', 'Your message has been sent successfully. I will get back to you soon!', 'success');
             form.reset();
           } else {
