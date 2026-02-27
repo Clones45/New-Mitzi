@@ -155,12 +155,9 @@
         </div>
 
         <div class="form-group">
-          <textarea id="eval_message_input" rows="3"></textarea>
+          <textarea name="message"></textarea>
           <label>Message (Optional)</label>
         </div>
-
-        <!-- Hidden Custom HTML Email field -->
-        <input type="hidden" name="message" id="computed_eval_message">
 
         <button type="submit" class="btn btn-primary btn-block home-eval-submit">
           REQUEST HOME EVALUATION
@@ -346,66 +343,7 @@
           return;
         }
 
-        // Grab inputs for the custom HTML email
-        const name = form.querySelector('input[name="full_name"]').value;
-        const email = form.querySelector('input[name="email"]').value;
-        const address = form.querySelector('input[name="property_address"]').value;
-        const messageText = document.getElementById('eval_message_input').value;
-
-        // Custom HTML Email Design
-        const customHtml = `
-        <div style="font-family: 'Inter', Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; background-color: #ffffff;">
-          <!-- Header -->
-          <div style="background-color: #111111; padding: 30px; text-align: center;">
-            <img src="https://mitzisantayana.com/assets/favicon.png" alt="Mitzi Santayana Logo" style="width: 80px; height: auto; margin-bottom: 15px;">
-            <h1 style="color: #c7a467; margin: 0; font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 600;">New Home Evaluation Request</h1>
-            <p style="color: #ffffff; margin: 5px 0 0 0; font-size: 14px; opacity: 0.9;">Via mitzisantayana.com</p>
-          </div>
-          
-          <!-- Body -->
-          <div style="padding: 30px;">
-            <p style="font-size: 16px; color: #333333; margin-bottom: 25px;">Hello Mitzi,<br>A visitor requested a home valuation from your "Sell with Mitzi" page. Here are their details:</p>
-            
-            <table style="width: 100%; border-collapse: collapse;">
-              <tr>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eeeeee; font-weight: 600; color: #555555; width: 140px;">Name</td>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eeeeee; color: #111111;">${name}</td>
-              </tr>
-              <tr>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eeeeee; font-weight: 600; color: #555555;">Email</td>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eeeeee; color: #111111;"><a href="mailto:${email}" style="color: #c7a467; text-decoration: none;">${email}</a></td>
-              </tr>
-              <tr>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eeeeee; font-weight: 600; color: #555555;">Phone</td>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eeeeee; color: #111111;">${phoneValue}</td>
-              </tr>
-              <tr>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eeeeee; font-weight: 600; color: #555555;">Property Address</td>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eeeeee; color: #111111;">${address}</td>
-              </tr>
-            </table>
-            
-            <div style="margin-top: 25px; background-color: #f9f9f9; padding: 20px; border-radius: 6px; border-left: 4px solid #c7a467;">
-              <p style="font-weight: 600; color: #555555; margin: 0 0 10px 0;">Additional Message:</p>
-              <p style="color: #333333; margin: 0; line-height: 1.6; white-space: pre-wrap;">${messageText || 'No message provided.'}</p>
-            </div>
-          </div>
-          
-          <!-- Footer -->
-          <div style="background-color: #f5f5f5; padding: 20px; text-align: center; border-top: 1px solid #eeeeee;">
-            <p style="margin: 0; color: #888888; font-size: 12px;">This email was sent automatically from Mitzi Santayana's official website.</p>
-          </div>
-        </div>
-        `;
-
-        document.getElementById('computed_eval_message').value = customHtml;
-
         const formData = new FormData(form);
-        // Remove standard text fields so Web3Forms only processes the beautifully formatted custom HTML message
-        formData.delete('full_name');
-        formData.delete('email');
-        formData.delete('phone_number');
-        formData.delete('property_address');
 
         fetch('https://api.web3forms.com/submit', {
           method: 'POST',
