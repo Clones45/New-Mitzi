@@ -470,13 +470,13 @@
 }
 
 /* Dark Mode Adjustments */
-[data-theme="dark"] .why-choose-card,
-[data-theme="dark"] .value-item {
+html[data-theme="dark"] .why-choose-card,
+html[data-theme="dark"] .value-item {
     background: var(--color-beige);
     border-color: rgba(197, 160, 89, 0.2);
 }
 
-[data-theme="dark"] .why-icon {
+html[data-theme="dark"] .why-icon {
     background: rgba(30, 30, 30, 0.95);
 }
 

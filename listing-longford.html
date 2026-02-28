@@ -5,14 +5,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>8269 Longford Rd | Mitzi Santayana REALTOR®</title>
-    <meta name="description"
-        content="For Rent: $3,300/mo - 3 Bed, 2.5 Bath Luxury Home in Millersville, MD. Contact Mitzi Santayana for a showing." />
+    <title>8269 Longford Rd | For Rent | Mitzi Santayana REALTOR®</title>
+    <meta name="description" content="For Rent: $3,300/mo - 3 Bed, 2.5 Bath Luxury Home in Millersville, MD." />
     <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <!-- Open Graph & Twitter Cards -->
+    <meta property="og:title" content="8269 Longford Rd | For Rent | Mitzi Santayana REALTOR®">
+    <meta property="og:description" content="For Rent: $3,300/mo - 3 Bed, 2.5 Bath Luxury Home in Millersville, MD.">
+    <meta property="og:image" content="https://mitzisantayana.com/P_Listings/L1.jpeg">
+    <meta property="og:url" content="https://mitzisantayana.com/listing-longford">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://mitzisantayana.com/P_Listings/L1.jpeg">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "SingleFamilyResidence",
+      "name": "8269 Longford Rd, Millersville, MD 21108",
+      "description": "For Rent: $3,300/mo - 3 Bed, 2.5 Bath Luxury Home in Millersville, MD.",
+      "url": "https://mitzisantayana.com/listing-longford",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "8269 Longford Rd",
+        "addressLocality": "Millersville",
+        "addressRegion": "MD",
+        "postalCode": "21108",
+        "addressCountry": "US"
+      },
+      "numberOfBathroomsTotal": 2.5,
+      "numberOfBedrooms": 3
+    }
+    </script>
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Main Styles -->
     <link rel="stylesheet" href="css/style.css">
@@ -120,6 +148,16 @@
                 <a href="/services" class="nav-link">Services</a>
                 <a href="/listings" class="nav-link active">Listings</a>
                 <a href="/#testimonials" class="nav-link">Testimonials</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link" style="display: flex; align-items: center; gap: 5px;">Guides <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="/howard-county" class="dropdown-item">Howard County</a>
+                        <a href="/anne-arundel-county" class="dropdown-item">Anne Arundel County</a>
+                        <a href="/prince-georges-county" class="dropdown-item">Prince George's County</a>
+                    </div>
+                </div>
+                <!-- MARKET UPDATES LINK -->
+                <a href="/market-updates" class="nav-link">Market Updates</a>
                 <a href="/contact" class="nav-link">Contact</a>
                 <a href="/contact" class="btn btn-primary nav-btn">Work With Mitzi</a>
                 <button id="theme-toggle" class="theme-toggle">
@@ -240,7 +278,7 @@
             </div>
             <div class="footer-logo" style="margin-top: 25px; text-align: left;">
                 <a href="https://www.boblucidoteam.com" target="_blank">
-                    <img src="assets/BL.png" alt="Bob Lucido Team" style="max-width: 200px; height: auto;">
+                    <img src="assets/BL.png" alt="Bob Lucido Team" style="max-width: 200px; height: auto;" loading="lazy">
                 </a>
             </div>
 
@@ -267,6 +305,34 @@
     </div>
 
     <!-- FOOTER LOAD -->
+        <!-- ✅ FOOTER -->
+    
+
+    <!-- FLOATING CALL WIDGET -->
+    <div class="call-float" id="callFloat">
+        <i class="fas fa-phone"></i>
+    </div>
+
+    <!-- CALL MODAL -->
+    <div class="call-modal" id="callModal">
+        <div class="call-modal-content">
+            <button class="close-modal" id="closeModal">✕</button>
+
+            <h2>Do you have questions?</h2>
+            <p>Call or text today, we are here to help!</p>
+
+            <a href="tel:4439004056" class="call-btn">
+                <i class="fa fa-phone"></i> 443-900-4056
+            </a>
+
+            <small>
+                I agree to be contacted by Mitzi Santayana via text, call & email.
+                To opt-out, reply "STOP" or click unsubscribe.
+            </small>
+        </div>
+    </div>
+
+        <!-- ✅ FOOTER -->
     <div id="footer-static">
         <footer class="footer">
             <!-- TOP CTA AREA -->
@@ -299,6 +365,9 @@
                         <a href="/services">Services</a>
                         <a href="/listings">Listings</a>
                         <a href="/contact">Contact</a>
+                        <a href="/howard-county">Howard County</a>
+                        <a href="/anne-arundel-county">Anne Arundel County</a>
+                        <a href="/prince-georges-county">Prince George's County</a>
                     </div>
 
                     <!-- CONTACT -->
@@ -309,26 +378,26 @@
                         <p>✉️ mitzisantayana@boblucidoteam.com</p>
                         <div class="footer-socials">
                             <a href="https://www.facebook.com/mitzi.santayana" target="_blank">
-                                <img src="icons/facebook.png" alt="Facebook" class="social-icon">
+                                <img src="icons/facebook.png" alt="Facebook" class="social-icon" loading="lazy">
                             </a>
                             <a href="https://www.instagram.com/missrealt0r/" target="_blank">
-                                <img src="icons/instagram.png" alt="Instagram" class="social-icon">
+                                <img src="icons/instagram.png" alt="Instagram" class="social-icon" loading="lazy">
                             </a>
                             <a href="https://www.tiktok.com/@missrealt0r" target="_blank">
-                                <img src="icons/tiktok.png" alt="TikTok" class="social-icon">
+                                <img src="icons/tiktok.png" alt="TikTok" class="social-icon" loading="lazy">
                             </a>
                             <a href="https://www.threads.com/@missrealt0r" target="_blank">
-                                <img src="icons/threads.png" alt="Threads" class="social-icon">
+                                <img src="icons/threads.png" alt="Threads" class="social-icon" loading="lazy">
                             </a>
                         </div>
                         <div class="footer-logo" style="margin-top: 25px; text-align: left;">
                             <a href="https://www.boblucidoteam.com" target="_blank">
-                                <img src="assets/BL.png" alt="Bob Lucido Team" style="max-width: 200px; height: auto;">
+                                <img src="assets/BL.png" alt="Bob Lucido Team" style="max-width: 200px; height: auto;" loading="lazy">
                             </a>
                         </div>
                         <div style="margin-top: 15px;">
                             <img src="assets/REALTOR and EHO.png" alt="REALTOR® and Equal Housing Opportunity"
-                                style="max-width: 160px; height: auto; opacity: 0.85;">
+                                style="max-width: 160px; height: auto; opacity: 0.85;" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -339,33 +408,7 @@
                 </p>
             </div>
         </footer>
-    </div>
-
-    <!-- FLOATING CALL WIDGET -->
-    <div class="call-float" id="callFloat">
-        <i class="fas fa-phone"></i>
-    </div>
-
-    <!-- CALL MODAL -->
-    <div class="call-modal" id="callModal">
-        <div class="call-modal-content">
-            <button class="close-modal" id="closeModal">✕</button>
-
-            <h2>Do you have questions?</h2>
-            <p>Call or text today, we are here to help!</p>
-
-            <a href="tel:4439004056" class="call-btn">
-                <i class="fa fa-phone"></i> 443-900-4056
-            </a>
-
-            <small>
-                I agree to be contacted by Mitzi Santayana via text, call & email.
-                To opt-out, reply "STOP" or click unsubscribe.
-            </small>
-        </div>
-    </div>
-
-    <!-- Scripts -->
+    </div>\n\n    <!-- Scripts -->
     <script src="js/script.js"></script>
 
     <script>

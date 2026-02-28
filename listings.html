@@ -2,6 +2,53 @@
 <html lang="en">
 
 <head>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "RealEstateAgent"],
+    "name": "Mitzi Santayana – REALTOR®",
+    "image": "https://mitzisantayana.com/assets/Mitzi_profile.jpg",
+    "@id": "https://mitzisantayana.com",
+    "url": "https://mitzisantayana.com/listings",
+    "telephone": "+1-443-900-4056",
+    "email": "mitzisantayana@boblucidoteam.com",
+    "priceRange": "$$$",
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Military Relocation Professional (MRP)",
+      "credentialCategory": "MilitaryRelocationProfessional"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Ellicott City", "containedInPlace": { "@type": "State", "name": "Maryland" } },
+      { "@type": "County", "name": "Howard County, Maryland" },
+      { "@type": "County", "name": "Anne Arundel County, Maryland" },
+      { "@type": "County", "name": "Prince George's County, Maryland" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "9251 Baltimore National Pike Suite D",
+      "addressLocality": "Ellicott City",
+      "addressRegion": "MD",
+      "postalCode": "21042",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 39.2676,
+      "longitude": -76.7983
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "10:00", "closes": "17:00" }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/mitzi.santayana",
+      "https://www.instagram.com/missrealt0r",
+      "https://www.tiktok.com/@missrealt0r",
+      "https://www.linkedin.com/in/mitzisantayana/"
+    ]
+  }
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -9,6 +56,8 @@
   <meta name="description" content="Luxury listings by Mitzi Santayana. Your next dream home is here." />
   <link rel="icon" href="/favicon.ico" sizes="any">
   <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap"
     rel="stylesheet">
@@ -32,37 +81,55 @@
     }
   </style>
 
+  <meta property="og:title" content="Listings | Mitzi Santayana REALTOR®">
+  <meta property="og:description" content="Luxury listings by Mitzi Santayana. Your next dream home is here.">
+  <meta property="og:image" content="https://mitzisantayana.com/assets/Mitzi_profile.jpg">
+  <meta property="og:url" content="https://mitzisantayana.com/listings">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://mitzisantayana.com/assets/Mitzi_profile.jpg">
 </head>
 
 <body>
 
   <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="/" class="logo">
-                <img src="/assets/favicon.png" alt="Mitzi Santayana Ellicott City Realtor Logo" class="nav-logo">
-                Mitzi Santayana <span class="logo-subtitle">REALTOR®</span>
-            </a>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="/" class="logo">
+        <img src="/assets/favicon.png" alt="Mitzi Santayana Ellicott City Realtor Logo" class="nav-logo">
+        Mitzi Santayana <span class="logo-subtitle">REALTOR®</span>
+      </a>
 
-            <div class="nav-links">
-                <a href="/about" class="nav-link">About</a>
-                <a href="/services" class="nav-link">Services</a>
-                <a href="/listings" class="nav-link active">Listings</a>
-                <a href="/#testimonials" class="nav-link">Testimonials</a>
-                <a href="/contact" class="nav-link">Contact</a>
-                <a href="/contact" class="btn btn-primary nav-btn">Work With Mitzi</a>
-                <button id="theme-toggle" class="theme-toggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
-
-            <button class="mobile-menu-btn" aria-label="Open Menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
+      <div class="nav-links">
+        <a href="/about" class="nav-link">About</a>
+        <a href="/services" class="nav-link">Services</a>
+        <a href="/listings" class="nav-link active">Listings</a>
+        <a href="/#testimonials" class="nav-link">Testimonials</a>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-link" style="display: flex; align-items: center; gap: 5px;">Guides <i
+              class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
+          <div class="dropdown-menu">
+            <a href="/howard-county" class="dropdown-item">Howard County</a>
+            <a href="/anne-arundel-county" class="dropdown-item">Anne Arundel County</a>
+            <a href="/prince-georges-county" class="dropdown-item">Prince George's County</a>
+          </div>
         </div>
-    </nav>
+        <!-- MARKET UPDATES LINK -->
+        <a href="/market-updates" class="nav-link">Market Updates</a>
+        <a href="/contact" class="nav-link">Contact</a>
+        <a href="/contact" class="btn btn-primary nav-btn">Work With Mitzi</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+
+      <button class="mobile-menu-btn" aria-label="Open Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </nav>
 
   <!-- LISTINGS MAIN TITLE -->
   <section class="section" style="padding-bottom: 2rem;">
@@ -84,12 +151,131 @@
 
       <div class="listings-grid">
 
+        <!-- LISTING CARD: Art Hall Ln (Coming Soon) -->
+        <div class="listing-card">
+          <a href="/listing-arthall" style="text-decoration: none; color: inherit; display: block;">
+            <div class="listing-image-container">
+              <img src="ahp/1.jfif" alt="3216 Art Hall Ln, Pasadena" class="listing-thumb" loading="lazy">
+              <div class="listing-badge sale" style="background-color: #f59e0b;">COMING SOON</div>
+            </div>
+            <div class="listing-details">
+              <div class="listing-price">$575,000</div>
+              <div class="listing-address">
+                3216 Art Hall Ln
+                <span>Pasadena, MD 21122</span>
+              </div>
+              <div class="listing-features">
+                <div class="l-feat"><i class="fas fa-bed"></i> 3 bd</div>
+                <div class="l-feat"><i class="fas fa-bath"></i> 3 ba</div>
+                <div class="l-feat"><i class="fas fa-ruler-combined"></i> 1,700 sq ft</div>
+              </div>
+              <div class="listing-btn">View Details</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- LISTING CARD: Sunset Dr -->
+        <div class="listing-card">
+          <a href="/listing-sunset" style="text-decoration: none; color: inherit; display: block;">
+            <div class="listing-image-container">
+              <img src="gb/5.jfif" alt="108 Sunset Dr, Glen Burnie" class="listing-thumb" loading="lazy">
+              <div class="listing-badge sale">FOR SALE</div>
+            </div>
+            <div class="listing-details">
+              <div class="listing-price">$359,000</div>
+              <div class="listing-address">
+                108 Sunset Dr
+                <span>Glen Burnie, MD 21060</span>
+              </div>
+              <div class="listing-features">
+                <div class="l-feat"><i class="fas fa-bed"></i> 3 bd</div>
+                <div class="l-feat"><i class="fas fa-bath"></i> 1.5 ba</div>
+                <div class="l-feat"><i class="fas fa-ruler-combined"></i> 1,910 sq ft</div>
+              </div>
+              <div class="listing-btn">View Details</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- LISTING CARD: Mine Run Rd -->
+        <div class="listing-card">
+          <a href="/listing-minerun" style="text-decoration: none; color: inherit; display: block;">
+            <div class="listing-image-container">
+              <img src="minerun/1.jfif" alt="7911 Mine Run Rd, Hanover" class="listing-thumb" loading="lazy">
+              <div class="listing-badge sale">FOR SALE</div>
+            </div>
+            <div class="listing-details">
+              <div class="listing-price">$545,000</div>
+              <div class="listing-address">
+                7911 Mine Run Rd
+                <span>Hanover, MD 21076</span>
+              </div>
+              <div class="listing-features">
+                <div class="l-feat"><i class="fas fa-bed"></i> 3 bd</div>
+                <div class="l-feat"><i class="fas fa-bath"></i> 4 ba</div>
+                <div class="l-feat"><i class="fas fa-ruler-combined"></i> 1,960 sq ft</div>
+              </div>
+              <div class="listing-btn">View Details</div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR RENT SECTION -->
+  <section class="section" id="for-rent" style="background-color: var(--color-white); padding-bottom: 4rem;">
+    <div class="container">
+      <div class="section-header-group">
+        <h2 class="section-title" style="font-size: 2rem;">For Rent</h2>
+      </div>
+
+      <div class="listings-grid">
+
+        <!-- LISTING CARD: Waldorf -->
+        <div class="listing-card">
+          <a href="/listing-waldorf" style="text-decoration: none; color: inherit; display: block;">
+            <div class="listing-image-container">
+              <img src="waldorf/1.jfif" alt="2978 Mourning Dove Pl UNIT D, Waldorf" class="listing-thumb"
+                loading="lazy">
+              <div class="listing-badge sale" style="background-color: #5C9CE6;">FOR RENT</div>
+            </div>
+            <div class="listing-details">
+              <div class="listing-price">$2,750 / mo</div>
+              <div class="listing-address">
+                2978 Mourning Dove Pl UNIT D
+                <span>Waldorf, MD 20603</span>
+              </div>
+              <div class="listing-features">
+                <div class="l-feat"><i class="fas fa-bed"></i> 4 bd</div>
+                <div class="l-feat"><i class="fas fa-bath"></i> 2.5 ba</div>
+                <div class="l-feat"><i class="fas fa-ruler-combined"></i> 1,745 sq ft</div>
+              </div>
+              <div class="listing-btn">View Details</div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- UNDER CONTRACT SECTION -->
+  <section class="section" id="under-contract" style="background-color: var(--color-cream); padding: 4rem 0;">
+    <div class="container">
+      <div class="section-header-group">
+        <h2 class="section-title" style="font-size: 2rem;">Under Contract</h2>
+      </div>
+
+      <div class="listings-grid">
+
         <!-- LISTING CARD: Pasadena -->
         <div class="listing-card">
           <a href="/listing-pasadena" style="text-decoration: none; color: inherit; display: block;">
             <div class="listing-image-container">
-              <img src="Ps/P1.jpeg" alt="802 203rd St" class="listing-thumb">
-              <div class="listing-badge sale">FOR SALE</div>
+              <img src="Ps/P1.jpeg" alt="802 203rd St" class="listing-thumb" loading="lazy">
+              <div class="listing-badge sale" style="background-color: #28a745;">Under Contract</div>
             </div>
             <div class="listing-details">
               <div class="listing-price">$400,000</div>
@@ -111,47 +297,11 @@
     </div>
   </section>
 
-  <!-- UNDER CONTRACT SECTION -->
-  <section class="section" id="under-contract" style="background-color: var(--color-cream); padding: 4rem 0;">
+  <!-- SOLD SECTION -->
+  <section class="section" id="sold" style="padding: 4rem 0;">
     <div class="container">
       <div class="section-header-group">
-        <h2 class="section-title" style="font-size: 2rem;">Under Contract</h2>
-      </div>
-
-      <div class="listings-grid">
-
-        <!-- LISTING CARD: Susini -->
-        <div class="listing-card">
-          <a href="/listing-suslin" style="text-decoration: none; color: inherit; display: block;">
-            <div class="listing-image-container">
-              <img src="susini/SD1.jfif" alt="8719 Susini Dr" class="listing-thumb">
-              <div class="listing-badge sale">Under Contract</div>
-            </div>
-            <div class="listing-details">
-              <div class="listing-price">$575,000</div>
-              <div class="listing-address">
-                8719 Susini Dr
-                <span>Laurel, MD 20723</span>
-              </div>
-              <div class="listing-features">
-                <div class="l-feat"><i class="fas fa-bed"></i> 3 bd</div>
-                <div class="l-feat"><i class="fas fa-bath"></i> 3 ba</div>
-                <div class="l-feat"><i class="fas fa-ruler-combined"></i> 2,290 sq ft</div>
-              </div>
-              <div class="listing-btn">View Details</div>
-            </div>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PENDING SECTION -->
-  <section class="section" id="pending" style="padding: 4rem 0;">
-    <div class="container">
-      <div class="section-header-group">
-        <h2 class="section-title" style="font-size: 2rem;">Pending</h2>
+        <h2 class="section-title" style="font-size: 2rem;">Recently Sold</h2>
       </div>
 
       <div class="listings-grid">
@@ -160,11 +310,11 @@
         <div class="listing-card">
           <a href="listing-heron.html" style="text-decoration: none; color: inherit; display: block;">
             <div class="listing-image-container">
-              <img src="Heron/H1.jpeg" alt="1358 Heron Rookery Way" class="listing-thumb">
-              <div class="listing-badge sale">PENDING</div>
+              <img src="Heron/H1.jpeg" alt="1358 Heron Rookery Way" class="listing-thumb" loading="lazy">
+              <div class="listing-badge sale" style="background-color: var(--color-gold);">SOLD</div>
             </div>
             <div class="listing-details">
-              <div class="listing-price">$830,000</div>
+              <div class="listing-price">Sold for $800,000</div>
               <div class="listing-address">
                 1358 Heron Rookery Way
                 <span>Odenton, MD 21113</span>
@@ -183,11 +333,11 @@
         <div class="listing-card">
           <a href="/listing-trippcreek" style="text-decoration: none; color: inherit; display: block;">
             <div class="listing-image-container">
-              <img src="Tct/T1.jpeg" alt="627 Tripp Creek Ct" class="listing-thumb">
-              <div class="listing-badge sale">PENDING</div>
+              <img src="Tct/T1.jpeg" alt="627 Tripp Creek Ct" class="listing-thumb" loading="lazy">
+              <div class="listing-badge sale" style="background-color: var(--color-gold);">SOLD</div>
             </div>
             <div class="listing-details">
-              <div class="listing-price">$369,999</div>
+              <div class="listing-price">Sold for $375,000</div>
               <div class="listing-address">
                 627 Tripp Creek Ct
                 <span>Annapolis, MD 21401</span>
@@ -206,11 +356,11 @@
         <div class="listing-card">
           <a href="/listing-sunrise" style="text-decoration: none; color: inherit; display: block;">
             <div class="listing-image-container">
-              <img src="sunrise/SS1.jfif" alt="6409 Summer Sunrise Dr" class="listing-thumb">
-              <div class="listing-badge sale">PENDING</div>
+              <img src="sunrise/SS1.jfif" alt="6409 Summer Sunrise Dr" class="listing-thumb" loading="lazy">
+              <div class="listing-badge sale" style="background-color: var(--color-gold);">SOLD</div>
             </div>
             <div class="listing-details">
-              <div class="listing-price">$1,100,000</div>
+              <div class="listing-price">Sold for $1,175,000</div>
               <div class="listing-address">
                 6409 Summer Sunrise Dr
                 <span>Columbia, MD 21044</span>
@@ -225,12 +375,35 @@
           </a>
         </div>
 
+        <!-- LISTING CARD: Susini -->
+        <div class="listing-card">
+          <a href="/listing-suslin" style="text-decoration: none; color: inherit; display: block;">
+            <div class="listing-image-container">
+              <img src="susini/SD1.jfif" alt="8719 Susini Dr" class="listing-thumb" loading="lazy">
+              <div class="listing-badge sale" style="background-color: var(--color-gold);">SOLD</div>
+            </div>
+            <div class="listing-details">
+              <div class="listing-price">Sold for $575,000</div>
+              <div class="listing-address">
+                8719 Susini Dr
+                <span>Laurel, MD 20723</span>
+              </div>
+              <div class="listing-features">
+                <div class="l-feat"><i class="fas fa-bed"></i> 3 bd</div>
+                <div class="l-feat"><i class="fas fa-bath"></i> 3 ba</div>
+                <div class="l-feat"><i class="fas fa-ruler-combined"></i> 2,290 sq ft</div>
+              </div>
+              <div class="listing-btn">View Details</div>
+            </div>
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- UPCOMING LISTINGS SECTION -->
-  <section class="section" id="upcoming" style="background-color: var(--color-cream); padding: 4rem 0;">
+  <section class="section" id="upcoming" style="background-color: var(--color-cream); padding: 4rem 0; display: none;">
     <div class="container">
 
       <div class="section-header-group">
@@ -239,36 +412,41 @@
       </div>
 
       <div class="listings-grid">
-
-        <!-- UPCOMING CARD: Mine Run Rd -->
-        <div class="listing-card">
-          <a href="/listing-minerun" style="text-decoration: none; color: inherit; display: block;">
-            <div class="listing-image-container">
-              <img src="/Upcoming/U3.jpeg" alt="7911 Mine Run Rd, Hanover" class="listing-thumb">
-              <div class="listing-badge coming-soon">COMING SOON</div>
-            </div>
-            <div class="listing-details">
-              <div class="listing-price">$545,000</div>
-              <div class="listing-address">
-                7911 Mine Run Rd
-                <span>Hanover, MD 21076</span>
-              </div>
-              <div class="listing-features">
-                <div class="l-feat"><i class="fas fa-bed"></i> 3 bd</div>
-                <div class="l-feat"><i class="fas fa-bath"></i> 4 ba</div>
-                <div class="l-feat"><i class="fas fa-ruler-combined"></i> 1,600 sq ft</div>
-              </div>
-              <div class="listing-btn">View Preview</div>
-            </div>
-          </a>
-        </div>
-
+        <!-- Currently no upcoming listings -->
       </div>
 
     </div>
   </section>
 
   <!-- FOOTER LOAD -->
+  <!-- ✅ FOOTER -->
+
+
+  <!-- FLOATING CALL WIDGET -->
+  <div class="call-float" id="callFloat">
+    <i class="fas fa-phone"></i>
+  </div>
+
+  <!-- CALL MODAL -->
+  <div class="call-modal" id="callModal">
+    <div class="call-modal-content">
+      <button class="close-modal" id="closeModal">✕</button>
+
+      <h2>Do you have questions?</h2>
+      <p>Call or text today, we are here to help!</p>
+
+      <a href="tel:4439004056" class="call-btn">
+        <i class="fa fa-phone"></i> 443-900-4056
+      </a>
+
+      <small>
+        I agree to be contacted by Mitzi Santayana via text, call & email.
+        To opt-out, reply "STOP" or click unsubscribe.
+      </small>
+    </div>
+  </div>
+
+  <!-- ✅ FOOTER -->
   <div id="footer-static">
     <footer class="footer">
       <!-- TOP CTA AREA -->
@@ -301,6 +479,9 @@
             <a href="/services">Services</a>
             <a href="/listings">Listings</a>
             <a href="/contact">Contact</a>
+            <a href="/howard-county">Howard County</a>
+            <a href="/anne-arundel-county">Anne Arundel County</a>
+            <a href="/prince-georges-county">Prince George's County</a>
           </div>
 
           <!-- CONTACT -->
@@ -311,26 +492,26 @@
             <p>✉️ mitzisantayana@boblucidoteam.com</p>
             <div class="footer-socials">
               <a href="https://www.facebook.com/mitzi.santayana" target="_blank">
-                <img src="icons/facebook.png" alt="Facebook" class="social-icon">
+                <img src="icons/facebook.png" alt="Facebook" class="social-icon" loading="lazy">
               </a>
               <a href="https://www.instagram.com/missrealt0r/" target="_blank">
-                <img src="icons/instagram.png" alt="Instagram" class="social-icon">
+                <img src="icons/instagram.png" alt="Instagram" class="social-icon" loading="lazy">
               </a>
               <a href="https://www.tiktok.com/@missrealt0r" target="_blank">
-                <img src="icons/tiktok.png" alt="TikTok" class="social-icon">
+                <img src="icons/tiktok.png" alt="TikTok" class="social-icon" loading="lazy">
               </a>
               <a href="https://www.threads.com/@missrealt0r" target="_blank">
-                <img src="icons/threads.png" alt="Threads" class="social-icon">
+                <img src="icons/threads.png" alt="Threads" class="social-icon" loading="lazy">
               </a>
             </div>
             <div class="footer-logo" style="margin-top: 25px; text-align: left;">
               <a href="https://www.boblucidoteam.com" target="_blank">
-                <img src="assets/BL.png" alt="Bob Lucido Team" style="max-width: 200px; height: auto;">
+                <img src="assets/BL.png" alt="Bob Lucido Team" style="max-width: 200px; height: auto;" loading="lazy">
               </a>
             </div>
             <div style="margin-top: 15px;">
               <img src="assets/REALTOR and EHO.png" alt="REALTOR® and Equal Housing Opportunity"
-                style="max-width: 160px; height: auto; opacity: 0.85;">
+                style="max-width: 160px; height: auto; opacity: 0.85;" loading="lazy">
             </div>
           </div>
         </div>
@@ -341,33 +522,7 @@
         </p>
       </div>
     </footer>
-  </div>
-
-  <!-- FLOATING CALL WIDGET -->
-  <div class="call-float" id="callFloat">
-    <i class="fas fa-phone"></i>
-  </div>
-
-  <!-- CALL MODAL -->
-  <div class="call-modal" id="callModal">
-    <div class="call-modal-content">
-      <button class="close-modal" id="closeModal">✕</button>
-
-      <h2>Do you have questions?</h2>
-      <p>Call or text today, we are here to help!</p>
-
-      <a href="tel:4439004056" class="call-btn">
-        <i class="fa fa-phone"></i> 443-900-4056
-      </a>
-
-      <small>
-        I agree to be contacted by Mitzi Santayana via text, call & email.
-        To opt-out, reply "STOP" or click unsubscribe.
-      </small>
-    </div>
-  </div>
-
-  <!-- Scripts -->
+  </div>\n\n <!-- Scripts -->
   <script src="js/script.js"></script>
 
 </body>

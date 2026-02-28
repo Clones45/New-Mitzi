@@ -5,14 +5,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>8719 Susini Dr | Mitzi Santayana REALTOR®</title>
-    <meta name="description"
-        content="Under Contract: $575,000 - 3 Bed, 3 Bath Ranch in Laurel, MD (Lakeview at Buckskin Ridge). Contact Mitzi Santayana for more information." />
+    <title>8719 Susini Dr | Sold | Mitzi Santayana REALTOR®</title>
+    <meta name="description" content="Sold for $575,000 - 3 Bed, 3 Bath Single Family Residence in Laurel, MD." />
     <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <!-- Open Graph & Twitter Cards -->
+    <meta property="og:title" content="8719 Susini Dr | Sold | Mitzi Santayana REALTOR®">
+    <meta property="og:description" content="Sold for $575,000 - 3 Bed, 3 Bath Single Family Residence in Laurel, MD.">
+    <meta property="og:image" content="https://mitzisantayana.com/susini/SD1.jfif">
+    <meta property="og:url" content="https://mitzisantayana.com/listing-suslin">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://mitzisantayana.com/susini/SD1.jfif">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "SingleFamilyResidence",
+      "name": "8719 Susini Dr, Laurel, MD 20723",
+      "description": "Sold for $575,000 - 3 Bed, 3 Bath Single Family Residence in Laurel, MD.",
+      "url": "https://mitzisantayana.com/listing-suslin",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "8719 Susini Dr",
+        "addressLocality": "Laurel",
+        "addressRegion": "MD",
+        "postalCode": "20723",
+        "addressCountry": "US"
+      },
+      "numberOfBathroomsTotal": 3,
+      "numberOfBedrooms": 3
+    }
+    </script>
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Main Styles -->
     <link rel="stylesheet" href="css/style.css">
@@ -120,6 +148,16 @@
                 <a href="/services" class="nav-link">Services</a>
                 <a href="/listings" class="nav-link active">Listings</a>
                 <a href="/#testimonials" class="nav-link">Testimonials</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link" style="display: flex; align-items: center; gap: 5px;">Guides <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="/howard-county" class="dropdown-item">Howard County</a>
+                        <a href="/anne-arundel-county" class="dropdown-item">Anne Arundel County</a>
+                        <a href="/prince-georges-county" class="dropdown-item">Prince George's County</a>
+                    </div>
+                </div>
+                <!-- MARKET UPDATES LINK -->
+                <a href="/market-updates" class="nav-link">Market Updates</a>
                 <a href="/contact" class="nav-link">Contact</a>
                 <a href="/contact" class="btn btn-primary nav-btn">Work With Mitzi</a>
                 <button id="theme-toggle" class="theme-toggle">
@@ -161,9 +199,9 @@
         <div class="property-main">
             <div class="property-header">
                 <div class="prop-status">
-                    <span class="prop-badge"></span> Under Contract
+                    <span class="prop-badge" style="background-color: var(--color-gold);"></span> SOLD
                 </div>
-                <div class="prop-price">$575,000</div>
+                <div class="prop-price">Sold for $575,000</div>
                 <h1 class="prop-address">
                     8719 Susini Dr
                     <span>Laurel, MD 20723</span>
@@ -232,11 +270,11 @@
 
         <!-- RIGHT COLUMN: CONTACT SIDEBAR -->
         <div class="contact-card">
-            <h3>Schedule a Showing</h3>
-            <p>Interested in this property? Contact Mitzi today to schedule a private tour.</p>
+            <h3>Contact Mitzi</h3>
+            <p>Interested in buying or selling a home similar to this? Reach out today.</p>
 
             <a href="/contact" class="contact-btn">
-                Request a Tour
+                Contact Mitzi
             </a>
 
             <div style="margin-top: 20px; text-align: center; font-size: 0.9rem;">
@@ -246,13 +284,10 @@
             </div>
             <div class="footer-logo" style="margin-top: 25px; text-align: left;">
                 <a href="https://www.boblucidoteam.com" target="_blank">
-                    <img src="assets/BL.png" alt="Bob Lucido Team" style="max-width: 200px; height: auto;">
+                    <img src="assets/BL.png" alt="Bob Lucido Team" style="max-width: 200px; height: auto;" loading="lazy">
                 </a>
             </div>
-            <div style="margin-top: 15px;">
-                <img src="assets/REALTOR and EHO.png" alt="REALTOR® and Equal Housing Opportunity"
-                    style="max-width: 160px; height: auto; opacity: 0.85;">
-            </div>
+            
 
         </div>
 
@@ -277,6 +312,34 @@
     </div>
 
     <!-- FOOTER LOAD -->
+        <!-- ✅ FOOTER -->
+    
+
+    <!-- FLOATING CALL WIDGET -->
+    <div class="call-float" id="callFloat">
+        <i class="fas fa-phone"></i>
+    </div>
+
+    <!-- CALL MODAL -->
+    <div class="call-modal" id="callModal">
+        <div class="call-modal-content">
+            <button class="close-modal" id="closeModal">✕</button>
+
+            <h2>Do you have questions?</h2>
+            <p>Call or text today, we are here to help!</p>
+
+            <a href="tel:4439004056" class="call-btn">
+                <i class="fa fa-phone"></i> 443-900-4056
+            </a>
+
+            <small>
+                I agree to be contacted by Mitzi Santayana via text, call & email.
+                To opt-out, reply "STOP" or click unsubscribe.
+            </small>
+        </div>
+    </div>
+
+        <!-- ✅ FOOTER -->
     <div id="footer-static">
         <footer class="footer">
             <!-- TOP CTA AREA -->
@@ -309,26 +372,39 @@
                         <a href="/services">Services</a>
                         <a href="/listings">Listings</a>
                         <a href="/contact">Contact</a>
+                        <a href="/howard-county">Howard County</a>
+                        <a href="/anne-arundel-county">Anne Arundel County</a>
+                        <a href="/prince-georges-county">Prince George's County</a>
                     </div>
 
                     <!-- CONTACT -->
                     <div class="footer-contact">
                         <h4>Get in Touch</h4>
+                        <p><i class="fas fa-building"></i> (410) 465-6900</p>
                         <p>📞 (443) 900-4056</p>
                         <p>✉️ mitzisantayana@boblucidoteam.com</p>
                         <div class="footer-socials">
                             <a href="https://www.facebook.com/mitzi.santayana" target="_blank">
-                                <img src="icons/facebook.png" alt="Facebook" class="social-icon">
+                                <img src="icons/facebook.png" alt="Facebook" class="social-icon" loading="lazy">
                             </a>
                             <a href="https://www.instagram.com/missrealt0r/" target="_blank">
-                                <img src="icons/instagram.png" alt="Instagram" class="social-icon">
+                                <img src="icons/instagram.png" alt="Instagram" class="social-icon" loading="lazy">
                             </a>
                             <a href="https://www.tiktok.com/@missrealt0r" target="_blank">
-                                <img src="icons/tiktok.png" alt="TikTok" class="social-icon">
+                                <img src="icons/tiktok.png" alt="TikTok" class="social-icon" loading="lazy">
                             </a>
                             <a href="https://www.threads.com/@missrealt0r" target="_blank">
-                                <img src="icons/threads.png" alt="Threads" class="social-icon">
+                                <img src="icons/threads.png" alt="Threads" class="social-icon" loading="lazy">
                             </a>
+                        </div>
+                        <div class="footer-logo" style="margin-top: 25px; text-align: left;">
+                            <a href="https://www.boblucidoteam.com" target="_blank">
+                                <img src="assets/BL.png" alt="Bob Lucido Team" style="max-width: 200px; height: auto;" loading="lazy">
+                            </a>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <img src="assets/REALTOR and EHO.png" alt="REALTOR® and Equal Housing Opportunity"
+                                style="max-width: 160px; height: auto; opacity: 0.85;" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -339,33 +415,7 @@
                 </p>
             </div>
         </footer>
-    </div>
-
-    <!-- FLOATING CALL WIDGET -->
-    <div class="call-float" id="callFloat">
-        <i class="fas fa-phone"></i>
-    </div>
-
-    <!-- CALL MODAL -->
-    <div class="call-modal" id="callModal">
-        <div class="call-modal-content">
-            <button class="close-modal" id="closeModal">✕</button>
-
-            <h2>Do you have questions?</h2>
-            <p>Call or text today, we are here to help!</p>
-
-            <a href="tel:4439004056" class="call-btn">
-                <i class="fa fa-phone"></i> 443-900-4056
-            </a>
-
-            <small>
-                I agree to be contacted by Mitzi Santayana via text, call & email.
-                To opt-out, reply "STOP" or click unsubscribe.
-            </small>
-        </div>
-    </div>
-
-    <!-- Scripts -->
+    </div>\n\n    <!-- Scripts -->
     <script src="js/script.js"></script>
 
     <script>

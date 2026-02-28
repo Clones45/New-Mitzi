@@ -5,14 +5,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>7911 Mine Run Rd | Mitzi Santayana REALTOR®</title>
-    <meta name="description"
-        content="Coming Soon: $545,000 - 3 Bed, 4 Bath Townhome in Hanover, MD. Contact Mitzi Santayana for details." />
+    <title>7911 Mine Run Rd | For Sale | Mitzi Santayana REALTOR®</title>
+    <meta name="description" content="For Sale: $545,000 - 3 Bed, 2 Full/2 Half Bath Townhome in Hanover, MD." />
     <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <!-- Open Graph & Twitter Cards -->
+    <meta property="og:title" content="7911 Mine Run Rd | For Sale | Mitzi Santayana REALTOR®">
+    <meta property="og:description" content="For Sale: $545,000 - 3 Bed, 2 Full/2 Half Bath Townhome in Hanover, MD.">
+    <meta property="og:image" content="https://mitzisantayana.com/minerun/1.jfif">
+    <meta property="og:url" content="https://mitzisantayana.com/listing-minerun">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://mitzisantayana.com/minerun/1.jfif">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "SingleFamilyResidence",
+      "name": "7911 Mine Run Rd, Hanover, MD 21076",
+      "description": "For Sale: $545,000 - 3 Bed, 2 Full/2 Half Bath Townhome in Hanover, MD.",
+      "url": "https://mitzisantayana.com/listing-minerun",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "7911 Mine Run Rd",
+        "addressLocality": "Hanover",
+        "addressRegion": "MD",
+        "postalCode": "21076",
+        "addressCountry": "US"
+      },
+      "numberOfBathroomsTotal": 4,
+      "numberOfBedrooms": 3
+    }
+    </script>
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Main Styles -->
     <link rel="stylesheet" href="css/style.css">
@@ -120,6 +148,16 @@
                 <a href="/services" class="nav-link">Services</a>
                 <a href="/listings" class="nav-link active">Listings</a>
                 <a href="/#testimonials" class="nav-link">Testimonials</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link" style="display: flex; align-items: center; gap: 5px;">Guides <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="/howard-county" class="dropdown-item">Howard County</a>
+                        <a href="/anne-arundel-county" class="dropdown-item">Anne Arundel County</a>
+                        <a href="/prince-georges-county" class="dropdown-item">Prince George's County</a>
+                    </div>
+                </div>
+                <!-- MARKET UPDATES LINK -->
+                <a href="/market-updates" class="nav-link">Market Updates</a>
                 <a href="/contact" class="nav-link">Contact</a>
                 <a href="/contact" class="btn btn-primary nav-btn">Work With Mitzi</a>
                 <button id="theme-toggle" class="theme-toggle">
@@ -135,10 +173,22 @@
         </div>
     </nav>
 
-    <!-- PHOTO HERO - SINGLE IMAGE -->
-    <div class="property-hero-collage" style="display: block;">
-        <div class="collage-main" style="grid-column: auto; grid-row: auto; border-radius: 12px; height: 500px;">
-            <img src="/Upcoming/U3.jpeg" alt="7911 Mine Run Rd Front" class="collage-img">
+    <!-- PHOTO COLLAGE HERO -->
+    <div class="property-hero-collage">
+        <div class="collage-main">
+            <img src="minerun/1.jfif" alt="7911 Mine Run Rd Front" class="collage-img">
+        </div>
+        <div class="collage-sub">
+            <img src="minerun/2.jfif" alt="Living Room" class="collage-img">
+        </div>
+        <div class="collage-sub">
+            <img src="minerun/14.jfif" alt="Kitchen" class="collage-img">
+        </div>
+        <div class="collage-sub">
+            <img src="minerun/25.jfif" alt="Primary Bedroom" class="collage-img">
+        </div>
+        <div class="collage-sub">
+            <img src="minerun/34.jfif" alt="Deck" class="collage-img">
         </div>
         <button class="view-gallery-btn" onclick="openLightbox()">
             <i class="fas fa-th"></i> View all photos
@@ -149,7 +199,7 @@
         <div class="property-main">
             <div class="property-header">
                 <div class="prop-status">
-                    <span class="prop-badge"></span> Coming Soon
+                    <span class="prop-badge"></span> For Sale
                 </div>
                 <div class="prop-price">$545,000</div>
                 <h1 class="prop-address">
@@ -177,25 +227,41 @@
             <div class="property-description-section">
                 <h2 class="prop-section-title">About this home</h2>
                 <div class="prop-description">
-                    COMING SOON with professional photography.
+                    Welcome to this modern and inviting townhome located in the highly desirable Parkside subdivision of
+                    Hanover, MD. Built in 2022, this meticulously maintained property features 3 bedrooms, 2 full
+                    bathrooms, 2 half bathrooms, and 1,960 finished square feet of contemporary living space spanning
+                    three levels.
 
-                    This modern townhome in Hanover, MD, built in 2022, offers 3 bedrooms, 4 bathrooms, and 1,600
-                    square feet of contemporary living space. Located in a desirable area, this property combines
-                    style and convenience.
+                    The bright, open-concept main level shines with luxury vinyl tile flooring, seamlessly connecting
+                    the living and dining areas to an additional powder room. The heart of the home is the sleek, eat-in
+                    kitchen, which boasts an oversized island, upgraded countertops, stainless steel appliances, a
+                    modern subway tile backsplash, a pantry, and a breakfast area with direct access to your private
+                    deck—perfect for enjoying your morning coffee or evening entertaining.
 
-                    Contact Mitzi Santayana today to schedule an exclusive preview showing and be among the first to see
-                    this exceptional property before it hits the market.
+                    Ascend to the upper level where you will find three comfortable bedrooms, two full bathrooms, and
+                    convenient laundry facilities. The spacious primary suite is a true retreat featuring a tray
+                    ceiling, an expansive walk-in closet, and a pristine ensuite bathroom with dual sinks.
+
+                    The entry-level foyer leads into a versatile, fully finished recreation room with a second powder
+                    room and walk-out exterior access to the rear yard. Residents of Parkside also enjoy fantastic
+                    community amenities, including an in-ground community pool. Don't miss the opportunity to make this
+                    gorgeous Hanover property your new home.
                 </div>
 
                 <h2 class="prop-section-title">Key Features</h2>
                 <div class="features-list">
-                    <div class="feature-item">Townhouse</div>
                     <div class="feature-item">Built in 2022</div>
+                    <div class="feature-item">Parkside Subdivision</div>
                     <div class="feature-item">3 Bedrooms</div>
-                    <div class="feature-item">4 Bathrooms</div>
-                    <div class="feature-item">1,600 Square Feet</div>
-                    <div class="feature-item">Hanover Location</div>
-                    <div class="feature-item">Coming Soon</div>
+                    <div class="feature-item">2 Full / 2 Half Baths</div>
+                    <div class="feature-item">1,960 Finished Sq Ft</div>
+                    <div class="feature-item">Open-Concept Main Level</div>
+                    <div class="feature-item">Oversized Kitchen Island</div>
+                    <div class="feature-item">Luxury Vinyl Tile Flooring</div>
+                    <div class="feature-item">Walk-Out Recreation Room</div>
+                    <div class="feature-item">Private Deck</div>
+                    <div class="feature-item">Primary Suite w/ Tray Ceiling</div>
+                    <div class="feature-item">Community Pool</div>
                 </div>
             </div>
 
@@ -203,12 +269,12 @@
 
         <!-- RIGHT COLUMN: CONTACT SIDEBAR -->
         <div class="contact-card">
-            <h3>Schedule a Preview</h3>
-            <p>Interested in this upcoming property? Contact Mitzi today for an exclusive showing.</p>
+            <h3>Schedule a Showing</h3>
+            <p>Interested in this property? Contact Mitzi today to schedule a private tour.</p>
 
-            <a href="/contact" class="contact-btn">
-                Request Preview
-            </a>
+            <button onclick="openTourModal()" class="contact-btn" style="width: 100%; border: none; cursor: pointer;">
+                Request a Tour
+            </button>
 
             <div style="margin-top: 20px; text-align: center; font-size: 0.9rem;">
                 <a href="tel:4439004056" style="color: var(--color-black); text-decoration: none;">
@@ -217,7 +283,7 @@
             </div>
             <div class="footer-logo" style="margin-top: 25px; text-align: left;">
                 <a href="https://www.boblucidoteam.com" target="_blank">
-                    <img src="assets/BL.png" alt="Bob Lucido Team" style="max-width: 200px; height: auto;">
+                    <img src="assets/BL.png" alt="Bob Lucido Team" style="max-width: 200px; height: auto;" loading="lazy">
                 </a>
             </div>
 
@@ -238,12 +304,103 @@
         <div class="lightbox-content">
             <img id="lightboxImage" src="" alt="Property Photo">
             <div class="lightbox-counter">
-                <span id="currentPhoto">1</span> / <span id="totalPhotos">1</span>
+                <span id="currentPhoto">1</span> / <span id="totalPhotos">49</span>
             </div>
         </div>
     </div>
 
     <!-- FOOTER LOAD -->
+        <!-- ✅ FOOTER -->
+    
+
+    <!-- FLOATING CALL WIDGET -->
+    <div class="call-float" id="callFloat">
+        <i class="fas fa-phone"></i>
+    </div>
+
+    <!-- CALL MODAL -->
+    <div class="call-modal" id="callModal">
+        <div class="call-modal-content">
+            <button class="close-modal" id="closeModal">✕</button>
+
+            <h2>Do you have questions?</h2>
+            <p>Call or text today, we are here to help!</p>
+
+            <a href="tel:4439004056" class="call-btn">
+                <i class="fa fa-phone"></i> 443-900-4056
+            </a>
+
+            <small>
+                I agree to be contacted by Mitzi Santayana via text, call & email.
+                To opt-out, reply "STOP" or click unsubscribe.
+            </small>
+        </div>
+    </div>
+
+    <!-- TOUR REQUEST MODAL -->
+    <div id="tourModal"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); z-index: 10000; align-items: center; justify-content: center;">
+        <div
+            style="background: var(--color-white); width: 90%; max-width: 500px; border-radius: 12px; padding: 2rem; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.2);">
+            <button class="close-modal" onclick="closeTourModal()">✕</button>
+
+            <h2 style="margin-bottom: 10px; font-size: 1.8rem; font-family: var(--font-heading);">Request a Tour</h2>
+            <p style="margin-bottom: 20px; color: var(--color-text-light);">Select a date and time to view 7911 Mine Run
+                Rd.</p>
+
+            <form action="https://api.web3forms.com/submit" method="POST"
+                style="display: flex; flex-direction: column; gap: 15px;">
+                <input type="hidden" name="access_key" value="19778e97-89a1-483a-b3e5-eac07e6d05c1">
+                <input type="hidden" name="subject" value="New Tour Request - 7911 Mine Run Rd">
+                <input type="hidden" name="from_name" value="Mitzi Website Lead">
+                <input type="hidden" name="Property_Address" value="7911 Mine Run Rd, Hanover, MD 21076">
+
+                <div>
+                    <label style="display: block; font-size: 0.9rem; margin-bottom: 5px; font-weight: 500;">Full Name
+                        *</label>
+                    <input type="text" name="full_name" required
+                        style="width: 100%; padding: 12px; border: 1px solid var(--glass-border); background: transparent; color: var(--color-black); border-radius: 4px; font-family: var(--font-body);">
+                </div>
+
+                <div>
+                    <label style="display: block; font-size: 0.9rem; margin-bottom: 5px; font-weight: 500;">Email
+                        *</label>
+                    <input type="email" name="email" required
+                        style="width: 100%; padding: 12px; border: 1px solid var(--glass-border); background: transparent; color: var(--color-black); border-radius: 4px; font-family: var(--font-body);">
+                </div>
+
+                <div>
+                    <label
+                        style="display: block; font-size: 0.9rem; margin-bottom: 5px; font-weight: 500;">Phone</label>
+                    <input type="tel" name="phone"
+                        style="width: 100%; padding: 12px; border: 1px solid var(--glass-border); background: transparent; color: var(--color-black); border-radius: 4px; font-family: var(--font-body);">
+                </div>
+
+                <div style="display: flex; gap: 15px;">
+                    <div style="flex: 1;">
+                        <label
+                            style="display: block; font-size: 0.9rem; margin-bottom: 5px; font-weight: 500;">Preferred
+                            Date *</label>
+                        <input type="date" name="preferred_date" required
+                            style="width: 100%; padding: 12px; border: 1px solid var(--glass-border); background: transparent; color: var(--color-black); border-radius: 4px; font-family: var(--font-body);">
+                    </div>
+                    <div style="flex: 1;">
+                        <label
+                            style="display: block; font-size: 0.9rem; margin-bottom: 5px; font-weight: 500;">Preferred
+                            Time *</label>
+                        <input type="time" name="preferred_time" required
+                            style="width: 100%; padding: 12px; border: 1px solid var(--glass-border); background: transparent; color: var(--color-black); border-radius: 4px; font-family: var(--font-body);">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="margin-top: 10px; width: 100%;">
+                    Send Request
+                </button>
+            </form>
+        </div>
+    </div>
+
+        <!-- ✅ FOOTER -->
     <div id="footer-static">
         <footer class="footer">
             <!-- TOP CTA AREA -->
@@ -276,6 +433,9 @@
                         <a href="/services">Services</a>
                         <a href="/listings">Listings</a>
                         <a href="/contact">Contact</a>
+                        <a href="/howard-county">Howard County</a>
+                        <a href="/anne-arundel-county">Anne Arundel County</a>
+                        <a href="/prince-georges-county">Prince George's County</a>
                     </div>
 
                     <!-- CONTACT -->
@@ -286,26 +446,26 @@
                         <p>✉️ mitzisantayana@boblucidoteam.com</p>
                         <div class="footer-socials">
                             <a href="https://www.facebook.com/mitzi.santayana" target="_blank">
-                                <img src="icons/facebook.png" alt="Facebook" class="social-icon">
+                                <img src="icons/facebook.png" alt="Facebook" class="social-icon" loading="lazy">
                             </a>
                             <a href="https://www.instagram.com/missrealt0r/" target="_blank">
-                                <img src="icons/instagram.png" alt="Instagram" class="social-icon">
+                                <img src="icons/instagram.png" alt="Instagram" class="social-icon" loading="lazy">
                             </a>
                             <a href="https://www.tiktok.com/@missrealt0r" target="_blank">
-                                <img src="icons/tiktok.png" alt="TikTok" class="social-icon">
+                                <img src="icons/tiktok.png" alt="TikTok" class="social-icon" loading="lazy">
                             </a>
                             <a href="https://www.threads.com/@missrealt0r" target="_blank">
-                                <img src="icons/threads.png" alt="Threads" class="social-icon">
+                                <img src="icons/threads.png" alt="Threads" class="social-icon" loading="lazy">
                             </a>
                         </div>
                         <div class="footer-logo" style="margin-top: 25px; text-align: left;">
                             <a href="https://www.boblucidoteam.com" target="_blank">
-                                <img src="assets/BL.png" alt="Bob Lucido Team" style="max-width: 200px; height: auto;">
+                                <img src="assets/BL.png" alt="Bob Lucido Team" style="max-width: 200px; height: auto;" loading="lazy">
                             </a>
                         </div>
                         <div style="margin-top: 15px;">
                             <img src="assets/REALTOR and EHO.png" alt="REALTOR® and Equal Housing Opportunity"
-                                style="max-width: 160px; height: auto; opacity: 0.85;">
+                                style="max-width: 160px; height: auto; opacity: 0.85;" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -316,38 +476,15 @@
                 </p>
             </div>
         </footer>
-    </div>
-
-    <!-- FLOATING CALL WIDGET -->
-    <div class="call-float" id="callFloat">
-        <i class="fas fa-phone"></i>
-    </div>
-
-    <!-- CALL MODAL -->
-    <div class="call-modal" id="callModal">
-        <div class="call-modal-content">
-            <button class="close-modal" id="closeModal">✕</button>
-
-            <h2>Do you have questions?</h2>
-            <p>Call or text today, we are here to help!</p>
-
-            <a href="tel:4439004056" class="call-btn">
-                <i class="fa fa-phone"></i> 443-900-4056
-            </a>
-
-            <small>
-                I agree to be contacted by Mitzi Santayana via text, call & email.
-                To opt-out, reply "STOP" or click unsubscribe.
-            </small>
-        </div>
-    </div>
-
-    <!-- Scripts -->
+    </div>\n\n    <!-- Scripts -->
     <script src="js/script.js"></script>
 
     <script>
         // Photo lightbox functionality
-        const photos = ['/Upcoming/U3.jpeg'];
+        const photos = [];
+        for (let i = 1; i <= 49; i++) {
+            photos.push(`minerun/${i}.jfif`);
+        }
 
         let currentPhotoIndex = 0;
 
@@ -401,12 +538,32 @@
                 closeLightbox();
             }
         });
+
+        // Tour Modal Logic
+        function openTourModal() {
+            document.getElementById('tourModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeTourModal() {
+            document.getElementById('tourModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close via background click
+        window.addEventListener('click', function (e) {
+            const tourModal = document.getElementById('tourModal');
+            if (e.target === tourModal) {
+                closeTourModal();
+            }
+        });
     </script>
 
     <!-- MOBILE STICKY ACTION BAR -->
     <div class="mobile-bottom-actions">
-        <a href="/contact" class="mobile-action-btn action-btn-primary">Request preview</a>
-        <a href="/contact" class="mobile-action-btn action-btn-secondary">Contact agent</a>
+        <button onclick="openTourModal()" class="mobile-action-btn action-btn-primary"
+            style="border: none; font-family: inherit; font-size: inherit; cursor: pointer;">Request tour</button>
+        <a href="tel:4439004056" class="mobile-action-btn action-btn-secondary">Contact agent</a>
     </div>
 
 </body>

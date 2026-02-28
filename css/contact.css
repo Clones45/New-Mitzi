@@ -14,7 +14,7 @@
   --contact-placeholder: rgba(0, 0, 0, 0.5);
 }
 
-[data-theme="dark"] {
+html[data-theme="dark"] {
   --contact-card-bg: rgba(255, 255, 255, 0.04);
   --contact-card-border: rgba(197, 160, 89, 0.2);
   --contact-text-primary: #ffffff;

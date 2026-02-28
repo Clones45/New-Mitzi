@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maryland Real Estate Market Updates | Mitzi Santayana</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Stay informed with real-time Maryland real estate market updates. Track Active Listing Counts and Median Listing Prices effortlessly with Mitzi Santayana, your expert Realtor.">
+    <meta name="keywords"
+        content="Maryland Real Estate Market, Howard County Real estate trends, Maryland housing data, Mitzi Santayana, Median Listing Price MD, Active Listing Count MD">
+    <meta name="author" content="Mitzi Santayana">
+
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Maryland Real Estate Market Updates | Mitzi Santayana">
+    <meta property="og:description"
+        content="Stay informed with real-time Maryland real estate market updates. Data pulled live from the Federal Reserve.">
+    <meta property="og:image" content="https://mitzisantayana.com/assets/favicon.png">
+    <meta property="og:url" content="https://mitzisantayana.com/market-updates">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Maryland Real Estate Market Updates | Mitzi Santayana">
+    <meta name="twitter:description"
+        content="Stay informed with real-time Maryland real estate market updates. Track Active Listing Counts and Median Listing Prices effortlessly.">
+    <meta name="twitter:image" content="https://mitzisantayana.com/assets/favicon.png">
+
+    <!-- JSON-LD Structured Data Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Maryland Real Estate Market Updates",
+        "description": "Real-time updates and charts for the Maryland housing market, tracking median prices and inventory.",
+        "url": "https://mitzisantayana.com/market-updates",
+        "publisher": {
+          "@type": "RealEstateAgent",
+          "name": "Mitzi Santayana, REALTOR®",
+          "image": "https://mitzisantayana.com/assets/logo-b.webp",
+          "address": {
+             "@type": "PostalAddress",
+             "streetAddress": "11030 Route 108",
+             "addressLocality": "Ellicott City",
+             "addressRegion": "MD",
+             "postalCode": "21042",
+             "addressCountry": "US"
+          }
+        }
+      }
+    </script>
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/call-widget.css">
+    <link rel="stylesheet" href="css/market-hub.css">
+
+    <!-- Chart.js for beautiful custom data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="canonical" href="https://mitzisantayana.com/market-updates" />
+
+<body>
+    <!-- ✅ HEADER / NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                <img src="/assets/favicon.png" alt="Mitzi Santayana Ellicott City Realtor Logo" class="nav-logo">
+                Mitzi Santayana <span class="logo-subtitle">REALTOR®</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="/about" class="nav-link">About</a>
+                <a href="/services" class="nav-link">Services</a>
+                <a href="/listings" class="nav-link">Listings</a>
+                <a href="/#testimonials" class="nav-link">Testimonials</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link" style="display: flex; align-items: center; gap: 5px;">Guides <i
+                            class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="/howard-county" class="dropdown-item">Howard County</a>
+                        <a href="/anne-arundel-county" class="dropdown-item">Anne Arundel County</a>
+                        <a href="/prince-georges-county" class="dropdown-item">Prince George's County</a>
+                    </div>
+                </div>
+                <!-- MARKET UPDATES LINK -->
+                <a href="/market-updates" class="nav-link active">Market Updates</a>
+                <a href="/contact" class="nav-link">Contact</a>
+                <a href="/contact" class="btn btn-primary nav-btn">Work With Mitzi</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Open Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 🏔️ Massive Hero Section -->
+    <header class="hub-hero fade-in">
+        <div class="hub-hero-content">
+            <span class="hub-hero-label">Live Data & Local Living</span>
+            <h1 class="hub-hero-title">Maryland Real Estate Hub</h1>
+            <p class="hub-hero-subtitle">
+                Your ultimate, crystal-clear source of information. Dive into beautiful real-time market data, trending
+                local news, and the absolute best of Maryland community living.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <!-- 📊 Market Pulse -->
+        <section class="hub-section slide-up">
+            <div class="hub-section-header">
+                <div>
+                    <h2 class="hub-section-title">Maryland Market Pulse</h2>
+                    <p style="color: var(--hub-text-muted); font-size: 1.1rem; margin-top: 0.5rem;">Statewide trends
+                        indicating the current health of the housing market.</p>
+                </div>
+                <a href="/contact" class="hub-section-link">Discuss Your Home's Value &rarr;</a>
+            </div>
+
+            <div class="pulse-grid">
+                <div class="pulse-card">
+                    <i class="fas fa-tags pulse-icon"></i>
+                    <div class="pulse-value" id="val-median-price">$--</div>
+                    <div class="pulse-label">Median Listing Price</div>
+                </div>
+                <div class="pulse-card">
+                    <i class="fas fa-home pulse-icon"></i>
+                    <div class="pulse-value" id="val-active-inventory">--</div>
+                    <div class="pulse-label">Active MD Listings</div>
+                </div>
+                <div class="pulse-card">
+                    <i class="fas fa-calendar-alt pulse-icon"></i>
+                    <div class="pulse-value">42</div>
+                    <div class="pulse-label">Avg. Days on Market</div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="marketChart"></canvas>
+            </div>
+        </section>
+
+        <!-- 📰 Live News Feed -->
+        <section class="hub-section slide-up">
+            <div class="hub-section-header">
+                <div>
+                    <h2 class="hub-section-title">Real Estate News</h2>
+                    <p style="color: var(--hub-text-muted); font-size: 1.1rem; margin-top: 0.5rem;">The latest headlines
+                        affecting buyers and sellers.</p>
+                </div>
+                <a href="https://www.housingwire.com" target="_blank" class="hub-section-link">More on HousingWire
+                    &rarr;</a>
+            </div>
+            <div class="editorial-grid" id="news-grid-container">
+                <div style="text-align:center; grid-column: 1/-1; padding: 3rem; color: #888;">
+                    <i class="fas fa-circle-notch fa-spin"></i> Fetching Live Articles...
+                </div>
+            </div>
+        </section>
+
+        <!-- 🌳 Maryland Activities & Lifestyle -->
+        <section class="hub-section slide-up">
+            <div class="hub-section-header">
+                <div>
+                    <h2 class="hub-section-title">Maryland Living</h2>
+                    <p style="color: var(--hub-text-muted); font-size: 1.1rem; margin-top: 0.5rem;">Discover why
+                        Maryland is an incredible place to call home.</p>
+                </div>
+            </div>
+
+            <div class="lifestyle-grid">
+                <!-- Links to Visit Howard County Dining -->
+                <a href="https://www.visithowardcounty.com/restaurants/" target="_blank" rel="noopener noreferrer"
+                    class="lifestyle-card">
+                    <img src="/assets/contact-bg.jpg" alt="Dining" class="lifestyle-image" loading="lazy">
+                    <div class="lifestyle-overlay">
+                        <div class="lifestyle-category">Dining</div>
+                        <h3 class="lifestyle-title">Top Eats in Historic Ellicott City</h3>
+                    </div>
+                </a>
+
+                <!-- Links to Visit Annapolis Weekend Guide -->
+                <a href="https://www.visitannapolis.org/things-to-do/on-the-water/" target="_blank"
+                    rel="noopener noreferrer" class="lifestyle-card">
+                    <img src="/assets/rellocate.jpg" alt="Waterfront" class="lifestyle-image" loading="lazy">
+                    <div class="lifestyle-overlay">
+                        <div class="lifestyle-category">Weekend Guide</div>
+                        <h3 class="lifestyle-title">Annapolis Harbor Escapes</h3>
+                    </div>
+                </a>
+
+                <!-- Links to Maryland DNR Patapsco Page -->
+                <a href="https://en.wikipedia.org/wiki/Patapsco_Valley_State_Park" target="_blank"
+                    rel="noopener noreferrer" class="lifestyle-card">
+                    <img src="/assets/home%20buy.jpg" alt="Parks" class="lifestyle-image" loading="lazy">
+                    <div class="lifestyle-overlay">
+                        <div class="lifestyle-category">Parks & Rec</div>
+                        <h3 class="lifestyle-title">Hiking Patapsco Valley Trails</h3>
+                    </div>
+                </a>
+
+                <!-- Links to Houzz or Architectural Digest Maryland specific page -->
+                <a href="https://en.wikipedia.org/wiki/Colonial_Revival_architecture" target="_blank"
+                    rel="noopener noreferrer" class="lifestyle-card">
+                    <img src="/assets/sell.jpg" alt="Homes" class="lifestyle-image" loading="lazy">
+                    <div class="lifestyle-overlay">
+                        <div class="lifestyle-category">Architecture</div>
+                        <h3 class="lifestyle-title">Maryland Colonial Design Trends</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FLOATING CALL BUTTON -->
+    <div class="call-float" id="callFloat">
+        <i class="fas fa-phone"></i>
+    </div>
+
+    <!-- CALL MODAL -->
+    <div class="call-modal" id="callModal">
+        <div class="call-modal-content">
+            <button class="close-modal" id="closeModal" aria-label="Close modal">✕</button>
+
+            <h2>Do you have questions?</h2>
+            <p>Call or text today, we are here to help!</p>
+
+            <a href="tel:4439004056" class="call-btn">
+                <i class="fa fa-phone"></i> 443-900-4056
+            </a>
+
+            <small>
+                I agree to be contacted by Mitzi Santayana via text, call & email.
+                To opt-out, reply "STOP" or click unsubscribe.
+            </small>
+        </div>
+    </div>
+
+
+    <!-- ✅ FOOTER -->
+    <div id="footer-static">
+        <footer class="footer">
+            <!-- TOP CTA AREA -->
+            <div class="footer-cta">
+                <h2>Ready to Find Your Home?</h2>
+                <p>
+                    Let's start your journey together. Reach out today and experience
+                    the difference of working with a REALTOR® who truly cares.
+                </p>
+                <a href="/contact" class="footer-btn">
+                    Get in Touch
+                </a>
+            </div>
+
+            <!-- MAIN FOOTER CONTENT -->
+            <div class="footer-main">
+                <div class="footer-grid">
+                    <!-- BRAND -->
+                    <div class="footer-brand">
+                        <h3>Mitzi Santayana</h3>
+                        <span class="realtor">REALTOR®</span>
+                        <p>Guiding You Home with Heart and Expertise</p>
+                    </div>
+
+                    <!-- QUICK LINKS -->
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <a href="/">Home</a>
+                        <a href="/about">About</a>
+                        <a href="/services">Services</a>
+                        <a href="/listings">Listings</a>
+                        <a href="/contact">Contact</a>
+                        <a href="/howard-county">Howard County</a>
+                        <a href="/anne-arundel-county">Anne Arundel County</a>
+                        <a href="/prince-georges-county">Prince George's County</a>
+                    </div>
+
+                    <!-- CONTACT -->
+                    <div class="footer-contact">
+                        <h4>Get in Touch</h4>
+                        <p><i class="fas fa-building"></i> (410) 465-6900</p>
+                        <p>📞 (443) 900-4056</p>
+                        <p>✉️ mitzisantayana@boblucidoteam.com</p>
+                        <div class="footer-socials">
+                            <a href="https://www.facebook.com/mitzi.santayana" target="_blank">
+                                <img src="icons/facebook.png" alt="Facebook" class="social-icon" loading="lazy">
+                            </a>
+                            <a href="https://www.instagram.com/missrealt0r/" target="_blank">
+                                <img src="icons/instagram.png" alt="Instagram" class="social-icon" loading="lazy">
+                            </a>
+                            <a href="https://www.tiktok.com/@missrealt0r" target="_blank">
+                                <img src="icons/tiktok.png" alt="TikTok" class="social-icon" loading="lazy">
+                            </a>
+                            <a href="https://www.threads.com/@missrealt0r" target="_blank">
+                                <img src="icons/threads.png" alt="Threads" class="social-icon" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="footer-logo" style="margin-top: 25px; text-align: left;">
+                            <a href="https://www.boblucidoteam.com" target="_blank">
+                                <img src="assets/BL.png" alt="Bob Lucido Team" style="max-width: 200px; height: auto;"
+                                    loading="lazy">
+                            </a>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <img src="assets/REALTOR and EHO.png" alt="REALTOR® and Equal Housing Opportunity"
+                                style="max-width: 160px; height: auto; opacity: 0.85;" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-line"></div>
+                <p class="copyright">
+                    © 2025 Mitzi Santayana. All rights reserved.
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ✅ SCRIPTS -->
+    <script src="js/script.js"></script>
+    <script src="js/market-hub.js"></script>
+</body>
+
+</html>

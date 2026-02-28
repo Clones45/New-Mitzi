@@ -2,6 +2,53 @@
 <html lang="en">
 
 <head>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "RealEstateAgent"],
+      "name": "Mitzi Santayana – REALTOR®",
+      "image": "https://mitzisantayana.com/assets/Mitzi_profile.jpg",
+      "@id": "https://mitzisantayana.com",
+      "url": "https://mitzisantayana.com/services",
+      "telephone": "+1-443-900-4056",
+      "email": "mitzisantayana@boblucidoteam.com",
+      "priceRange": "$$$",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Military Relocation Professional (MRP)",
+        "credentialCategory": "MilitaryRelocationProfessional"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Ellicott City", "containedInPlace": { "@type": "State", "name": "Maryland" } },
+        { "@type": "County", "name": "Howard County, Maryland" },
+        { "@type": "County", "name": "Anne Arundel County, Maryland" },
+        { "@type": "County", "name": "Prince George's County, Maryland" }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "9251 Baltimore National Pike Suite D",
+        "addressLocality": "Ellicott City",
+        "addressRegion": "MD",
+        "postalCode": "21042",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.2676,
+        "longitude": -76.7983
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "10:00", "closes": "17:00" }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/mitzi.santayana",
+        "https://www.instagram.com/missrealt0r",
+        "https://www.tiktok.com/@missrealt0r",
+        "https://www.linkedin.com/in/mitzisantayana/"
+      ]
+    }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Estate Services in Ellicott City MD | Buy, Sell & Relocate – Mitzi Santayana</title>
@@ -34,6 +81,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="canonical" href="https://mitzisantayana.com/services" />
 
+    <meta property="og:url" content="https://mitzisantayana.com/services">
+    <meta property="og:type" content="website">
 </head>
 
 <body>
@@ -50,9 +99,19 @@
                 <a href="/services" class="nav-link active">Services</a>
                 <a href="/listings" class="nav-link">Listings</a>
                 <a href="/#testimonials" class="nav-link">Testimonials</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link" style="display: flex; align-items: center; gap: 5px;">Guides <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="/howard-county" class="dropdown-item">Howard County</a>
+                        <a href="/anne-arundel-county" class="dropdown-item">Anne Arundel County</a>
+                        <a href="/prince-georges-county" class="dropdown-item">Prince George's County</a>
+                    </div>
+                </div>
+                <!-- MARKET UPDATES LINK -->
+                <a href="/market-updates" class="nav-link">Market Updates</a>
                 <a href="/contact" class="nav-link">Contact</a>
                 <a href="/contact" class="btn btn-primary nav-btn">Work With Mitzi</a>
-                <button id="theme-toggle" class="theme-toggle">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
                     <i class="fas fa-moon"></i>
                 </button>
             </div>
@@ -88,7 +147,7 @@
                 <div class="service-image-wrapper">
                     <img src="assets/home buy.jpg"
                         alt="Buying a home in Ellicott City and Howard County Maryland with REALTOR Mitzi Santayana"
-                        class="service-showcase-image">
+                        class="service-showcase-image" loading="lazy">
                     <div class="service-image-icon">
                         <i class="fas fa-home"></i>
                     </div>
@@ -117,7 +176,7 @@
                 <div class="service-image-wrapper">
                     <img src="assets/sell.jpg"
                         alt="Selling your home in Howard County Maryland – Mitzi Santayana top listing agent"
-                        class="service-showcase-image">
+                        class="service-showcase-image" loading="lazy">
                     <div class="service-image-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
@@ -146,7 +205,7 @@
                 <div class="service-image-wrapper">
                     <img src="assets/rellocate.jpg"
                         alt="Military PCS relocation to Maryland – Certified MRP Mitzi Santayana"
-                        class="service-showcase-image">
+                        class="service-showcase-image" loading="lazy">
                     <div class="service-image-icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
@@ -289,7 +348,7 @@
     <!-- CALL MODAL -->
     <div class="call-modal" id="callModal">
         <div class="call-modal-content">
-            <button class="close-modal" id="closeModal">✕</button>
+            <button class="close-modal" id="closeModal" aria-label="Close modal">✕</button>
 
             <h2>Do you have questions?</h2>
             <p>Call or text today, we are here to help!</p>
@@ -306,6 +365,8 @@
     </div>
 
     <!-- Footer -->
+    <!-- ✅ FOOTER -->
+    <!-- ✅ FOOTER -->
     <div id="footer-static">
         <footer class="footer">
             <!-- TOP CTA AREA -->
@@ -315,7 +376,7 @@
                     Let's start your journey together. Reach out today and experience
                     the difference of working with a REALTOR® who truly cares.
                 </p>
-                <a href="contact.html" class="footer-btn">
+                <a href="/contact" class="footer-btn">
                     Get in Touch
                 </a>
             </div>
@@ -333,14 +394,14 @@
                     <!-- QUICK LINKS -->
                     <div class="footer-links">
                         <h4>Quick Links</h4>
-                        <a href="index.html">Home</a>
-                        <a href="about.html">About</a>
-                        <a href="services.html">Services</a>
-                        <a href="listings.html">Listings</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="howard-county.html">Howard County</a>
-                        <a href="anne-arundel-county.html">Anne Arundel County</a>
-                        <a href="prince-georges-county.html">Prince George's County</a>
+                        <a href="/">Home</a>
+                        <a href="/about">About</a>
+                        <a href="/services">Services</a>
+                        <a href="/listings">Listings</a>
+                        <a href="/contact">Contact</a>
+                        <a href="/howard-county">Howard County</a>
+                        <a href="/anne-arundel-county">Anne Arundel County</a>
+                        <a href="/prince-georges-county">Prince George's County</a>
                     </div>
 
                     <!-- CONTACT -->
@@ -351,26 +412,26 @@
                         <p>✉️ mitzisantayana@boblucidoteam.com</p>
                         <div class="footer-socials">
                             <a href="https://www.facebook.com/mitzi.santayana" target="_blank">
-                                <img src="icons/facebook.png" alt="Facebook" class="social-icon">
+                                <img src="icons/facebook.png" alt="Facebook" class="social-icon" loading="lazy">
                             </a>
                             <a href="https://www.instagram.com/missrealt0r/" target="_blank">
-                                <img src="icons/instagram.png" alt="Instagram" class="social-icon">
+                                <img src="icons/instagram.png" alt="Instagram" class="social-icon" loading="lazy">
                             </a>
                             <a href="https://www.tiktok.com/@missrealt0r" target="_blank">
-                                <img src="icons/tiktok.png" alt="TikTok" class="social-icon">
+                                <img src="icons/tiktok.png" alt="TikTok" class="social-icon" loading="lazy">
                             </a>
                             <a href="https://www.threads.com/@missrealt0r" target="_blank">
-                                <img src="icons/threads.png" alt="Threads" class="social-icon">
+                                <img src="icons/threads.png" alt="Threads" class="social-icon" loading="lazy">
                             </a>
                         </div>
                         <div class="footer-logo" style="margin-top: 25px; text-align: left;">
                             <a href="https://www.boblucidoteam.com" target="_blank">
-                                <img src="assets/BL.png" alt="Bob Lucido Team" style="max-width: 200px; height: auto;">
+                                <img src="assets/BL.png" alt="Bob Lucido Team" style="max-width: 200px; height: auto;" loading="lazy">
                             </a>
                         </div>
                         <div style="margin-top: 15px;">
                             <img src="assets/REALTOR and EHO.png" alt="REALTOR® and Equal Housing Opportunity"
-                                style="max-width: 160px; height: auto; opacity: 0.85;">
+                                style="max-width: 160px; height: auto; opacity: 0.85;" loading="lazy">
                         </div>
                     </div>
                 </div>

@@ -606,17 +606,26 @@
 }
 
 /* Dark Mode Adjustments */
-[data-theme="dark"] .service-showcase-card,
-[data-theme="dark"] .additional-service-card,
-[data-theme="dark"] .process-step-content {
+html[data-theme="dark"] .service-detail-card,
+html[data-theme="dark"] .additional-service-card {
     background: var(--color-beige);
     border-color: rgba(197, 160, 89, 0.2);
 }
 
-[data-theme="dark"] .service-image-icon {
+html[data-theme="dark"] .service-detail-card h3,
+html[data-theme="dark"] .additional-service-card h3 {
+    color: var(--color-black);
+}
+
+html[data-theme="dark"] .price-badge {
+    background: rgba(197, 160, 89, 0.2);
+    color: var(--color-gold);
+}
+
+html[data-theme="dark"] .service-image-icon {
     background: rgba(30, 30, 30, 0.95);
 }
 
-[data-theme="dark"] .process-step-number {
+html[data-theme="dark"] .process-step-number {
     background: var(--color-beige);
 }

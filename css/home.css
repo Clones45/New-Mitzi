@@ -402,19 +402,19 @@
 }
 
 /* Dark Mode Adjustments */
-[data-theme="dark"] .service-card {
+html[data-theme="dark"] .service-card {
     background: var(--color-beige);
     border-color: rgba(197, 160, 89, 0.2);
 }
 
-[data-theme="dark"] .stats-section {
+html[data-theme="dark"] .stats-section {
     background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-beige) 100%);
 }
 
-[data-theme="dark"] .stat-item {
+html[data-theme="dark"] .stat-item {
     color: var(--color-black);
 }
 
-[data-theme="dark"] .stat-label {
+html[data-theme="dark"] .stat-label {
     color: var(--color-text-light);
 }

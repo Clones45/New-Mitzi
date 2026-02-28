@@ -40,7 +40,7 @@
 }
 
 /* Dark Mode Variables (Optional Bonus) */
-[data-theme="dark"] {
+html[data-theme="dark"] {
     --color-white: #1a1a1a;
     --color-cream: #111111;
     --color-beige: #2a2a2a;
@@ -136,9 +136,11 @@ h6 {
 /* Buttons */
 .btn {
     display: inline-block;
-    padding: 1rem 2.5rem;
+    padding: 0.8rem 1.8rem;
+    /* Reduced horizontal padding */
     font-family: var(--font-body);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    /* Matched nav-link size */
     text-transform: uppercase;
     letter-spacing: 1px;
     text-decoration: none;
@@ -229,9 +231,11 @@ h6 {
     left: 50%;
     transform: translateX(-50%);
     width: 95%;
-    max-width: 1200px;
+    max-width: 1300px;
+    /* Increased from 1200px */
     z-index: 1000;
-    padding: 0.8rem 2rem;
+    padding: 0.8rem 1.5rem;
+    /* Reduced horizontal padding */
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -242,7 +246,7 @@ h6 {
 }
 
 /* Dark Mode Override for Navbar */
-[data-theme="dark"] .navbar {
+html[data-theme="dark"] .navbar {
     background: rgba(30, 30, 30, 0.95);
     border-color: rgba(255, 255, 255, 0.1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -263,9 +267,11 @@ h6 {
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
+    /* Reduced gap */
     font-family: var(--font-heading);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    /* Slightly reduced font size */
     color: var(--color-black);
     text-decoration: none;
     letter-spacing: 0.5px;
@@ -283,7 +289,8 @@ h6 {
 }
 
 .logo-subtitle {
-    font-size: 0.75rem;
+    font-size: 0.70rem;
+    /* Reduced from 0.75rem */
     font-weight: 300;
     margin-left: 5px;
     opacity: 0.8;
@@ -292,13 +299,15 @@ h6 {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.2rem;
+    /* Reduced from 1.5rem */
 }
 
 .nav-link {
     color: var(--color-black);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    /* Reduced from 0.9rem to prevent wrapping */
     position: relative;
     transition: color var(--transition-fast);
 }
@@ -320,6 +329,49 @@ h6 {
 
 .nav-link:hover::after {
     width: 100%;
+}
+
+/* Dropdown Menu Styles */
+.nav-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: var(--color-white);
+    min-width: 220px;
+    box-shadow: var(--shadow-hover);
+    border-radius: 8px;
+    padding: var(--spacing-sm) 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-fast);
+    z-index: 100;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    color: var(--color-black);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all var(--transition-fast);
+}
+
+.dropdown-item:hover {
+    background: var(--color-cream);
+    color: var(--color-gold);
+    padding-left: 25px;
 }
 
 .nav-link.active {
@@ -691,11 +743,12 @@ h6 {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+
+    /* Increased from 768px due to longer menu */
     .section-title {
         font-size: 2.5rem;
     }
-
 
     .nav-links {
         display: none;
@@ -712,6 +765,25 @@ h6 {
         background: var(--color-white);
         padding: var(--spacing-md);
         box-shadow: var(--shadow-soft);
+    }
+
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        padding-left: 20px;
+        min-width: 100%;
+        border-radius: 0;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        background: transparent;
+    }
+
+    .nav-dropdown:hover .dropdown-menu {
+        display: block;
+        transform: none;
     }
 
     .mobile-menu-btn {
@@ -2592,26 +2664,26 @@ h6 {
 }
 
 /* Dark Mode Support for Contact Card */
-[data-theme="dark"] .contact-card {
+html[data-theme="dark"] .contact-card {
     background: rgba(30, 30, 30, 0.95);
     border: 1px solid rgba(197, 160, 89, 0.2);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-[data-theme="dark"] .contact-card h3 {
+html[data-theme="dark"] .contact-card h3 {
     color: var(--color-gold);
 }
 
-[data-theme="dark"] .contact-card p {
+html[data-theme="dark"] .contact-card p {
     color: rgba(255, 255, 255, 0.7);
 }
 
-[data-theme="dark"] .contact-btn {
+html[data-theme="dark"] .contact-btn {
     background: var(--color-gold);
     color: var(--color-black);
 }
 
-[data-theme="dark"] .contact-btn:hover {
+html[data-theme="dark"] .contact-btn:hover {
     background: #d4b276;
     color: var(--color-black);
 }
@@ -2798,18 +2870,18 @@ h6 {
     }
 
     /* Dark Mode Support for Mobile Action Bar */
-    [data-theme="dark"] .mobile-bottom-actions {
+    html[data-theme="dark"] .mobile-bottom-actions {
         background: rgba(30, 30, 30, 0.95);
         border-top: 1px solid rgba(197, 160, 89, 0.2);
         box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
     }
 
-    [data-theme="dark"] .action-btn-primary {
+    html[data-theme="dark"] .action-btn-primary {
         background-color: var(--color-gold);
         color: var(--color-black);
     }
 
-    [data-theme="dark"] .action-btn-secondary {
+    html[data-theme="dark"] .action-btn-secondary {
         background-color: rgba(50, 50, 50, 0.8);
         color: var(--color-gold);
         border: 1px solid rgba(197, 160, 89, 0.3);

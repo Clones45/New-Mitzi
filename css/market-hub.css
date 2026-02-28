@@ -1,0 +1,344 @@
+/* market-hub.css - Complete Redesign for a Bright, High-End Hub */
+
+/* Variables */
+:root {
+    --hub-bg: #FAFAFA;
+    --hub-card-bg: #FFFFFF;
+    --hub-text-dark: #1A1A1A;
+    --hub-text-muted: #666666;
+    --hub-accent: #D1B06B;
+    /* Luxury Gold */
+    --hub-accent-light: rgba(209, 176, 107, 0.1);
+    --hub-border: #E5E5E5;
+    --hub-shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.03);
+    --hub-shadow-md: 0 12px 32px rgba(0, 0, 0, 0.06);
+    --hub-shadow-hover: 0 20px 48px rgba(0, 0, 0, 0.1);
+}
+
+html[data-theme="dark"] {
+    --hub-bg: #111111;
+    --hub-card-bg: #1a1a1a;
+    --hub-text-dark: #FAFAFA;
+    --hub-text-muted: #A0A0A0;
+    --hub-border: #333333;
+    --hub-shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
+    --hub-shadow-md: 0 12px 32px rgba(0, 0, 0, 0.4);
+    --hub-shadow-hover: 0 20px 48px rgba(0, 0, 0, 0.6);
+}
+
+body {
+    background-color: var(--hub-bg);
+}
+
+/* 🏔️ Massive Hero Section */
+.hub-hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-image: url('/assets/hero-home.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-bottom: 4rem;
+}
+
+.hub-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.hub-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    padding: 0 2rem;
+    margin-top: 60px;
+    /* Offset for fixed navbar */
+}
+
+.hub-hero-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--hub-accent);
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.hub-hero-title {
+    font-family: var(--font-heading);
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.hub-hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* 📊 Market Pulse Container */
+.hub-section {
+    max-width: 1400px;
+    margin: 0 auto 6rem;
+    padding: 0 2rem;
+}
+
+.hub-section-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid var(--hub-border);
+    padding-bottom: 1rem;
+}
+
+.hub-section-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--hub-text-dark);
+    font-weight: 600;
+}
+
+.hub-section-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--hub-accent);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.hub-section-link:hover {
+    color: var(--color-black);
+}
+
+/* 📈 Data Pulse Cards */
+.pulse-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.pulse-card {
+    background: var(--hub-card-bg);
+    border: 1px solid var(--hub-border);
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: var(--hub-shadow-sm);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+}
+
+.pulse-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hub-shadow-md);
+    border-color: var(--hub-accent);
+}
+
+.pulse-icon {
+    font-size: 2rem;
+    color: var(--hub-accent);
+    margin-bottom: 1.5rem;
+}
+
+.pulse-value {
+    font-size: 3rem;
+    font-family: var(--font-heading);
+    color: var(--hub-text-dark);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.pulse-label {
+    font-size: 0.9rem;
+    color: var(--hub-text-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 📉 Chart Container */
+.chart-container {
+    background: var(--hub-card-bg);
+    border: 1px solid var(--hub-border);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: var(--hub-shadow-md);
+    height: 500px;
+    position: relative;
+}
+
+/* 📰 News Editorial Grid */
+.editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 3rem;
+}
+
+.editorial-card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.editorial-image-wrapper {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    background: #eaeaea;
+}
+
+.editorial-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.editorial-card:hover .editorial-image {
+    transform: scale(1.05);
+}
+
+.editorial-meta {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--hub-accent);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.75rem;
+}
+
+.editorial-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    line-height: 1.3;
+    color: var(--hub-text-dark);
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.editorial-card:hover .editorial-title {
+    color: var(--hub-accent);
+}
+
+.editorial-excerpt {
+    font-size: 1.05rem;
+    color: var(--hub-text-muted);
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 🌳 Activities / Lifestyle Carousel */
+.lifestyle-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.lifestyle-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 400px;
+    text-decoration: none;
+    box-shadow: var(--hub-shadow-sm);
+}
+
+.lifestyle-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.lifestyle-card:hover .lifestyle-image {
+    transform: scale(1.08);
+}
+
+.lifestyle-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+    color: white;
+}
+
+.lifestyle-category {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.lifestyle-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .pulse-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lifestyle-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hub-hero-title {
+        font-size: 3rem;
+    }
+
+    .pulse-grid,
+    .lifestyle-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .editorial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hub-section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .chart-container {
+        height: 400px;
+    }
+}
