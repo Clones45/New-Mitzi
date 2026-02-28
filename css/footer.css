@@ -143,6 +143,7 @@
     color: #777;
     font-size: 13px;
 }
+
 /* SOCIAL ICON IMAGES */
 .social-icon {
     width: 28px;
@@ -159,4 +160,15 @@
 .social-icon:hover {
     transform: scale(1.15);
     opacity: 0.85;
+}
+
+/* WHITE LOGO FILTER */
+.footer-white-logo {
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.footer-white-logo:hover {
+    opacity: 1;
 }
