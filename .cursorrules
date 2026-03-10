@@ -1,0 +1,14 @@
+Workspace Rules for Mitzi's Website
+File Access
+When asked to read or analyze a .docx file, always use the installed Python environment.
+
+Use the command: py -m pip show python-docx to verify the library if needed.
+
+Execute reading tasks via: py -c "import docx; doc = docx.Document('FILENAME.docx'); [print(p.text) for p in doc.paragraphs if p.text.strip()]"
+
+Environment Context
+Operating System: Windows (PowerShell)
+
+Primary Python Command: py
+
+Project Goal: Local SEO and Keyword Optimization for Mitzi Santayana (Realtor).
