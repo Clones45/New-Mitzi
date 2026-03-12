@@ -284,7 +284,26 @@
         </div>
     </div>
 
-<!-- FLOATING CALL WIDGET -->
+
+    <!-- PHOTO LIGHTBOX MODAL -->
+    <div id="photoLightbox" class="photo-lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-prev" onclick="changePhoto(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-next" onclick="changePhoto(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="Property Photo">
+            <div class="lightbox-counter">
+                <span id="currentPhoto">1</span> / <span id="totalPhotos">1</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- FLOATING CALL WIDGET -->
     <!-- FLOATING CALL BUTTON -->
     <div class="call-float" id="callFloat">
         <i class="fas fa-phone"></i>
