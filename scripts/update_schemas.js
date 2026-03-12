@@ -67,8 +67,8 @@ const files = [
     },
     {
         file: 'listing-sunset.html',
-        title: '108 Sunset Dr | For Sale | Mitzi Santayana REALTOR®',
-        desc: 'For Sale: $359,000 - 3 Bed, 1.5 Bath Ranch Home in Glen Burnie, MD.',
+        title: '108 Sunset Dr | Under Contract | Mitzi Santayana REALTOR®',
+        desc: 'Under Contract: $359,000 - 3 Bed, 1.5 Bath Ranch Home in Glen Burnie, MD.',
         img: 'https://mitzisantayana.com/gb/5.jfif',
         url: 'https://mitzisantayana.com/listing-sunset',
         address: '108 Sunset Dr, Glen Burnie, MD 21060',
