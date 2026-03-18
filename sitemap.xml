@@ -248,6 +248,18 @@
     <priority>1.00</priority>
   </url>
   <url>
+    <loc>https://mitzisantayana.com/listing-anchorage</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://mitzisantayana.com/listing-kadinsky</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
     <loc>https://mitzisantayana.com/listing-arthall</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>weekly</changefreq>
