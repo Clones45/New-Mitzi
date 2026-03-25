@@ -6,17 +6,25 @@
     {
       "@context": "https://schema.org",
       "@type": ["LocalBusiness", "RealEstateAgent"],
-      "name": "Mitzi Santayana – REALTOR® Howard County",
+      "name": "Mitzi Santayana – Top Real Estate Agent in Bowie, MD",
       "image": "https://mitzisantayana.com/assets/Mitzi_profile.jpg",
-      "@id": "https://mitzisantayana.com/howard-county",
-      "url": "https://mitzisantayana.com/howard-county",
+      "@id": "https://mitzisantayana.com/bowie-md-real-estate",
+      "url": "https://mitzisantayana.com/bowie-md-real-estate",
       "telephone": "+1-443-900-4056",
+      "email": "mitzisantayana@boblucidoteam.com",
+      "priceRange": "$$$",
       "hasCredential": {
         "@type": "EducationalOccupationalCredential",
         "name": "Military Relocation Professional (MRP)",
         "credentialCategory": "MilitaryRelocationProfessional"
       },
-      "areaServed": { "@type": "County", "name": "Howard County, Maryland" },
+      "areaServed": [
+        { "@type": "City", "name": "Bowie", "containedInPlace": { "@type": "County", "name": "Prince George's County", "containedInPlace": { "@type": "State", "name": "Maryland" } } },
+        { "@type": "Place", "name": "Fairwood, Bowie, Maryland" },
+        { "@type": "Place", "name": "Woodmore, Bowie, Maryland" },
+        { "@type": "Place", "name": "Pointer Ridge, Bowie, Maryland" },
+        { "@type": "Place", "name": "Mitchellville, Maryland" }
+      ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "9251 Baltimore National Pike Suite D",
@@ -27,24 +35,24 @@
       }
     }
     </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top Realtor in Howard County MD | Ellicott City Real Estate Expert – Mitzi Santayana</title>
+    <title>Top Real Estate Agent in Bowie, MD | Mitzi Santayana</title>
     <meta name="description"
-        content="Looking for a top realtor in Howard County, MD? Mitzi Santayana specializes in Ellicott City, Columbia & Clarksville home sales. Military Relocation Professional (MRP) serving all of Howard County.">
+        content="Looking for the top real estate agent in Bowie, MD? Mitzi Santayana serves Fairwood, Woodmore, Pointer Ridge &amp; all of Prince George's County. Get a free home valuation today.">
     <meta name="geo.region" content="US-MD">
-    <meta name="geo.placename" content="Howard County, Maryland">
-    <link rel="canonical" href="https://mitzisantayana.com/howard-county">
+    <meta name="geo.placename" content="Bowie, Maryland">
+    <link rel="canonical" href="https://mitzisantayana.com/bowie-md-real-estate">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
     <link rel="apple-touch-icon" href="/favicon.png">
     <link rel="preload" href="assets/hero-home.png" as="image">
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-    <meta property="og:title" content="Top Realtor in Howard County MD – Mitzi Santayana">
-    <meta property="og:description"
-        content="Howard County's trusted REALTOR® & Military Relocation Professional. Serving Ellicott City, Columbia, Clarksville & beyond.">
+    <meta property="og:title" content="Top Real Estate Agent in Bowie, MD | Mitzi Santayana">
+    <meta property="og:description" content="Bowie, MD's trusted REALTOR® serving Fairwood, Woodmore, Pointer Ridge &amp; Prince George's County. Get a free home valuation today.">
     <meta property="og:image" content="https://mitzisantayana.com/assets/Mitzi_profile.jpg">
-    <meta property="og:url" content="https://mitzisantayana.com/howard-county">
+    <meta property="og:url" content="https://mitzisantayana.com/bowie-md-real-estate">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://mitzisantayana.com/assets/Mitzi_profile.jpg">
@@ -52,18 +60,29 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/call-widget.css">
-
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .market-stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1.5rem; margin-top:2rem; }
+        .stat-card { background:var(--color-white); border:1px solid rgba(184,148,84,.2); border-radius:12px; padding:1.5rem; text-align:center; box-shadow:0 4px 20px rgba(0,0,0,.06); }
+        .stat-number { font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; color:var(--color-gold); display:block; }
+        .stat-label { font-size:.85rem; color:var(--color-text-light); margin-top:.25rem; display:block; }
+        .neighborhood-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.5rem; margin-top:2rem; }
+        .neighborhood-card { background:var(--color-white); border-radius:12px; padding:1.75rem; box-shadow:0 4px 24px rgba(0,0,0,.07); border-left:4px solid var(--color-gold); transition:transform .2s,box-shadow .2s; }
+        .neighborhood-card:hover { transform:translateY(-4px); box-shadow:0 10px 40px rgba(0,0,0,.12); }
+        .neighborhood-card h3 { font-family:'Playfair Display',serif; font-size:1.2rem; margin-bottom:.75rem; }
+        .value-prop-list { list-style:none; padding:0; margin:1.5rem 0 2rem; }
+        .value-prop-list li { padding:.6rem 0; border-bottom:1px solid rgba(0,0,0,.06); display:flex; align-items:flex-start; gap:.75rem; font-size:1rem; }
+        .value-prop-list li:last-child { border-bottom:none; }
+        .value-prop-list i { color:var(--color-gold); margin-top:3px; flex-shrink:0; }
+    </style>
 </head>
 
 <body>
@@ -71,236 +90,170 @@
     <nav class="navbar">
         <div class="container nav-container">
             <a href="/" class="logo">
-                <img src="assets/LBL.png" alt="Mitzi Santayana Ellicott City Realtor Logo" class="nav-logo">
+                <img src="/assets/LBL.png" alt="Mitzi Santayana Realtor Logo" class="nav-logo">
                 Mitzi Santayana <span class="logo-subtitle">REALTOR®</span>
             </a>
             <div class="nav-links">
-                <a href="about.html" class="nav-link">About</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="listings.html" class="nav-link">Listings</a>
-                <a href="index.html#testimonials" class="nav-link">Testimonials</a>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/services" class="nav-link">Services</a>
+                <a href="/listings" class="nav-link">Listings</a>
+                <a href="/#testimonials" class="nav-link">Testimonials</a>
                 <div class="nav-dropdown">
-                    <a href="#" class="nav-link" style="display: flex; align-items: center; gap: 5px;">Communities <i
-                            class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
+                    <a href="#" class="nav-link" style="display:flex;align-items:center;gap:5px;">Communities <i class="fas fa-chevron-down" style="font-size:.7em;"></i></a>
                     <div class="dropdown-menu">
                         <a href="/howard-county" class="dropdown-item">Howard County</a>
                         <a href="/anne-arundel-county" class="dropdown-item">Anne Arundel County</a>
                         <a href="/prince-georges-county" class="dropdown-item">Prince George's County</a>
                         <a href="/bowie-md-realtor" class="dropdown-item">Bowie, MD</a>
+                        <a href="/maryland-military-relocation" class="dropdown-item">Military Relocation</a>
                     </div>
                 </div>
-                <!-- MARKET UPDATES LINK -->
                 <a href="/market-updates" class="nav-link">Market Updates</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-                <a href="contact.html" class="btn btn-primary nav-btn">Work With Mitzi</a>
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode"><i
-                        class="fas fa-moon"></i></button>
+                <a href="/contact" class="nav-link">Contact</a>
+                <a href="/contact" class="btn btn-primary nav-btn">Work With Mitzi</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
             </div>
             <button class="mobile-menu-btn" aria-label="Open Menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
             </button>
         </div>
     </nav>
 
     <!-- HERO -->
-    <header class="hero"
-        style="min-height:65vh;background-image:url('assets/hero-home.png');background-size:cover;background-position:center;">
+    <header class="hero" style="min-height:68vh;background-image:url('assets/hero-home.png');background-size:cover;background-position:center;">
         <div class="hero-overlay"></div>
         <div class="container hero-content text-center">
-            <span class="overline" style="color:var(--color-gold);letter-spacing:3px;">Howard County, Maryland</span>
-            <h1 class="hero-title fade-in-up">Ellicott City Real Estate Agent Guide<br><span style="font-size:0.65em;font-weight:400">Your Top Realtor in Howard County, MD</span></h1>
-            <p class="hero-subtitle fade-in-up delay-1">Ellicott City · Columbia · Clarksville · Military Families
-                Welcome</p>
-            <a href="contact.html" class="btn btn-primary fade-in-up delay-2">Start Your Howard County Search</a>
+            <span class="overline" style="color:var(--color-gold);letter-spacing:3px;">Prince George's County, Maryland</span>
+            <h1 class="hero-title fade-in-up">Bowie, MD Real Estate<br>Expert REALTOR®</h1>
+            <p class="hero-subtitle fade-in-up delay-1">Fairwood · Woodmore · Pointer Ridge · Mitchellville · Bowie Town Center</p>
+            <div class="realtor-badge fade-in-up delay-2">Mitzi Santayana · MRP Certified · 15+ Years Experience</div>
+            <a href="/contact" class="btn btn-primary fade-in-up delay-3" style="margin-top:1.5rem;">Get a Free Home Valuation</a>
         </div>
     </header>
 
     <!-- INTRO -->
     <section class="section">
         <div class="container">
-            <div class="text-center" style="max-width:800px;margin:0 auto;">
-                <span class="overline">Local Expertise</span>
-                <h2 class="section-title">Your Howard County Real Estate Expert</h2>
+            <div class="text-center" style="max-width:820px;margin:0 auto;">
+                <span class="overline">Your Bowie, MD Real Estate Expert</span>
+                <h2 class="section-title">Why Bowie Buyers &amp; Sellers Choose Mitzi</h2>
                 <div class="divider-center"></div>
                 <p style="font-size:1.1rem;color:var(--color-text-light);margin-bottom:1.5rem;">
-                    Howard County is consistently ranked one of the <strong>best places to live in America</strong> —
-                    top-rated schools, safe neighborhoods, and easy access to Baltimore and DC. As a resident and active
-                    REALTOR® based right in Ellicott City, I know every neighborhood, price trend, and hidden gem in the
-                    county.
+                    Bowie is one of Prince George's County's most sought-after communities — from the luxury planned neighborhoods of <strong>Fairwood</strong> and <strong>Woodmore</strong> to the competitive family enclaves of Pointer Ridge and Mitchellville. As a <strong>Certified Military Relocation Professional (MRP)</strong> and seasoned Bowie REALTOR®, Mitzi brings hyper-local expertise, full-service marketing, and genuine dedication to every transaction.
                 </p>
-                <p style="font-size:1.1rem;font-weight:500;">
-                    Whether you're buying your first home, upgrading to luxury, or PCS-moving to the area, I'll guide
-                    you every step of the way with expert local knowledge and genuine care.
-                </p>
+                <a href="/contact" class="btn btn-primary">Get a Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARKET STATS -->
+    <section class="section bg-cream">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="overline">Live Market Data</span>
+                <h2 class="section-title">Bowie, MD Real Estate Market</h2>
+                <div class="divider-center"></div>
+            </div>
+            <div class="market-stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">$450K+</span>
+                    <span class="stat-label">Median Home Sale Price</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">+16.62%</span>
+                    <span class="stat-label">Year-Over-Year Rental Growth</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">Strong</span>
+                    <span class="stat-label">Seller's Market Conditions</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">DC Metro</span>
+                    <span class="stat-label">Commuter-Friendly Location</span>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- NEIGHBORHOODS -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="overline">Hyper-Local Expertise</span>
+                <h2 class="section-title">Bowie Neighborhoods I Know Inside &amp; Out</h2>
+                <div class="divider-center"></div>
+            </div>
+            <div class="neighborhood-grid">
+                <div class="neighborhood-card">
+                    <h3><i class="fas fa-tree" style="color:var(--color-gold);margin-right:.5rem;"></i>Fairwood</h3>
+                    <p style="color:var(--color-text-light);font-size:.95rem;">One of Bowie's most prestigious planned communities, featuring luxury single-family homes, manicured common areas, a community pool, tennis courts, and top-rated schools. High demand and low turnover — expertise matters here. Known for elegant estates and a strong sense of community.</p>
+                </div>
+                <div class="neighborhood-card">
+                    <h3><i class="fas fa-star" style="color:var(--color-gold);margin-right:.5rem;"></i>Woodmore</h3>
+                    <p style="color:var(--color-text-light);font-size:.95rem;">An exclusive gated community in Mitchellville bordering Bowie, Woodmore is renowned for its golf course, upscale estates, and high-profile residents. If you're searching for luxury real estate near Bowie, Woodmore represents the pinnacle of Prince George's County living.</p>
+                </div>
+                <div class="neighborhood-card">
+                    <h3><i class="fas fa-compass" style="color:var(--color-gold);margin-right:.5rem;"></i>Pointer Ridge</h3>
+                    <p style="color:var(--color-text-light);font-size:.95rem;">An established neighborhood with large lots, mature trees, and strong community ties. Ideal for families seeking spacious homes at competitive prices with excellent access to Bowie's top-rated schools and commuter routes.</p>
+                </div>
+                <div class="neighborhood-card">
+                    <h3><i class="fas fa-landmark" style="color:var(--color-gold);margin-right:.5rem;"></i>Mitchellville</h3>
+                    <p style="color:var(--color-text-light);font-size:.95rem;">Bordering Bowie, Mitchellville is known for upscale executive homes, privacy, and easy access to major commuter routes into DC and Annapolis. A first choice for professionals and relocating executives.</p>
+                </div>
+                <div class="neighborhood-card">
+                    <h3><i class="fas fa-shopping-bag" style="color:var(--color-gold);margin-right:.5rem;"></i>Bowie Town Center Area</h3>
+                    <p style="color:var(--color-text-light);font-size:.95rem;">Walkability meets suburban comfort. Neighborhoods near Bowie Town Center offer convenient access to dining, retail, and entertainment without sacrificing space or quality of life.</p>
+                </div>
+                <div class="neighborhood-card">
+                    <h3><i class="fas fa-shield-alt" style="color:var(--color-gold);margin-right:.5rem;"></i>Joint Base Andrews Area</h3>
+                    <p style="color:var(--color-text-light);font-size:.95rem;">As an <strong>MRP-Certified</strong> agent, Mitzi specializes in helping military families near Joint Base Andrews navigate VA loans, BAH maximization, and tight PCS timelines — with deep knowledge of the Bowie-area housing market.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BUYER & SELLER SERVICES -->
     <section class="section bg-cream">
         <div class="container">
             <div class="section-header text-center">
-                <span class="overline">Communities I Serve</span>
-                <h2 class="section-title">Howard County Neighborhoods</h2>
+                <span class="overline">How I Can Help</span>
+                <h2 class="section-title">Buying or Selling a Home in Bowie, MD</h2>
                 <div class="divider-center"></div>
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <h3>Ellicott City</h3>
-                    <p>Historic charm meets modern luxury. Home to top-ranked schools, upscale dining, and some of
-                        Maryland's most beautiful homes. Median home values consistently above $600K.</p>
-                    <a href="contact.html" class="text-link">Find Homes in Ellicott City <i
-                            class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="card-icon"><i class="fas fa-city"></i></div>
-                    <h3>Columbia</h3>
-                    <p>A planned community built on diversity and innovation. Columbia's 10 villages offer a variety of
-                        housing from affordable condos to multi-million dollar estates.</p>
-                    <a href="contact.html" class="text-link">Explore Columbia Homes <i
-                            class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="card-icon"><i class="fas fa-tree"></i></div>
-                    <h3>Clarksville & Glenelg</h3>
-                    <p>Semi-rural luxury living with large lots and scenic views. Clarksville is favored by executives,
-                        and Glenelg offers equestrian properties and custom estates.</p>
-                    <a href="contact.html" class="text-link">See Clarksville Listings <i
-                            class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- MILITARY SECTION -->
-    <section class="section">
-        <div class="container">
-            <div class="story-container two-col-grid">
-                <div>
-                    <span class="overline">Military Families</span>
-                    <h2 class="section-title">PCS Move to Howard County?</h2>
-                    <div class="divider-center" style="margin:1.5rem 0;"></div>
-                    <p style="color:var(--color-text-light);margin-bottom:1rem;">
-                        Howard County is perfectly positioned near <strong>Fort Meade (NSA)</strong>, Aberdeen Proving
-                        Ground, and Joint Base Andrews. As a <strong>Certified Military Relocation Professional
-                            (MRP)</strong>, I specialize in helping military families navigate VA loans, tight PCS
-                        timelines, and school district choices.
-                    <ul style="list-style:none;padding:0;margin-bottom:2rem;">
-                        <li style="margin-bottom:.75rem;"><i class="fas fa-check"
-                                style="color:var(--color-gold);margin-right:.5rem;"></i> VA Loan Expertise</li>
-                        <li style="margin-bottom:.75rem;"><i class="fas fa-check"
-                                style="color:var(--color-gold);margin-right:.5rem;"></i> Virtual Tours for Out-of-State
-                            Buyers</li>
-                        <li style="margin-bottom:.75rem;"><i class="fas fa-check"
-                                style="color:var(--color-gold);margin-right:.5rem;"></i> BAH-Optimized Home Searches
-                        </li>
-                        <li style="margin-bottom:.75rem;"><i class="fas fa-check"
-                                style="color:var(--color-gold);margin-right:.5rem;"></i> School District Guidance</li>
+                    <div class="card-icon"><i class="fas fa-house-chimney"></i></div>
+                    <h3>Buying in Bowie</h3>
+                    <ul class="value-prop-list">
+                        <li><i class="fas fa-check"></i> Pre-offer neighborhood analysis for Fairwood, Woodmore &amp; more</li>
+                        <li><i class="fas fa-check"></i> VA loan &amp; conventional financing guidance</li>
+                        <li><i class="fas fa-check"></i> Competitive offer strategies in a hot seller's market</li>
+                        <li><i class="fas fa-check"></i> Virtual &amp; sight-unseen buying for relocating buyers</li>
                     </ul>
-                    <a href="relocate-with-mitzi.html" class="btn btn-primary">Learn About Military Relocation</a>
-                </div>
-                <div>
-                    <img src="assets/Mitzi_profile.jpg"
-                        alt="Mitzi Santayana Military Relocation Professional MRP serving Howard County Maryland"
-                        style="width:100%;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.15);" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- STATS -->
-    <section class="section bg-cream">
-        <div class="container text-center">
-            <h2 class="section-title">Why Howard County?</h2>
-            <div class="divider-center"></div>
-            <div class="services-grid" style="margin-top:2rem;">
-                <div class="service-card">
-                    <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <h3>#1 Ranked Schools</h3>
-                    <p>Howard County Public Schools consistently rank as one of Maryland's best, with nationally
-                        recognized high schools and strong STEM programs.</p>
+                    <a href="/buy-with-mitzi" class="text-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card">
-                    <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Safest Communities</h3>
-                    <p>Repeatedly named one of the safest counties in Maryland, making it the ideal place to raise a
-                        family or retire in comfort.</p>
-                </div>
-                <div class="service-card">
-                    <div class="card-icon"><i class="fas fa-road"></i></div>
-                    <h3>Prime Location</h3>
-                    <p>Located between Baltimore and DC on I-95 and Route 29, Howard County offers the perfect
-                        combination of suburban peace and urban access.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ELLICOTT CITY ZIP CODE MARKET DATA -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="overline">Hyper-Local Market Intelligence</span>
-                <h2 class="section-title">Ellicott City Market Data by ZIP Code</h2>
-                <div class="divider-center"></div>
-                <p style="color:var(--color-text-light);max-width:700px;margin:0 auto 2rem">Howard County's market varies significantly across its three Ellicott City ZIP codes. Understanding these micro-market differences is the foundation of every pricing and purchase strategy I build for clients.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="card-icon"><i class="fas fa-map-pin"></i></div>
-                    <h3>ZIP 21042 &mdash; West Ellicott City</h3>
-                    <p style="color:var(--color-text-light);margin-bottom:1rem">The most affluent Ellicott City zip code. Luxury estates, top feeder schools (River Hill High), and large lots define this market.</p>
-                    <ul style="list-style:none;padding:0;font-size:.95rem">
-                        <li style="padding:.4rem 0;border-bottom:1px solid rgba(0,0,0,.06)"><strong>Median Home Price:</strong> $799,900</li>
-                        <li style="padding:.4rem 0;border-bottom:1px solid rgba(0,0,0,.06)"><strong>Active Listings:</strong> ~88</li>
-                        <li style="padding:.4rem 0"><strong>Profile:</strong> Luxury estates &amp; executive homes</li>
+                    <div class="card-icon"><i class="fas fa-sign-hanging"></i></div>
+                    <h3>Selling in Bowie</h3>
+                    <ul class="value-prop-list">
+                        <li><i class="fas fa-check"></i> Free Comparative Market Analysis (CMA)</li>
+                        <li><i class="fas fa-check"></i> Professional photography &amp; luxury marketing</li>
+                        <li><i class="fas fa-check"></i> Strategic pricing to attract multiple offers</li>
+                        <li><i class="fas fa-check"></i> Expert negotiation &amp; post-closing coordination</li>
                     </ul>
-                    <a href="/contact" class="text-link" style="margin-top:1rem;display:inline-block">Search 21042 Homes <i class="fas fa-arrow-right"></i></a>
+                    <a href="/sell-with-mitzi" class="text-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card">
-                    <div class="card-icon"><i class="fas fa-map-pin"></i></div>
-                    <h3>ZIP 21041 &mdash; East Ellicott City</h3>
-                    <p style="color:var(--color-text-light);margin-bottom:1rem">Established neighborhoods with a mix of colonial and contemporary homes. Strong demand from buyers in the $500K–$650K range.</p>
-                    <ul style="list-style:none;padding:0;font-size:.95rem">
-                        <li style="padding:.4rem 0;border-bottom:1px solid rgba(0,0,0,.06)"><strong>Median Home Price:</strong> ~$625,000</li>
-                        <li style="padding:.4rem 0;border-bottom:1px solid rgba(0,0,0,.06)"><strong>Market Trend:</strong> Steady appreciation</li>
-                        <li style="padding:.4rem 0"><strong>Profile:</strong> Family homes, good school access</li>
+                    <div class="card-icon"><i class="fas fa-medal"></i></div>
+                    <h3>Military PCS to Bowie</h3>
+                    <ul class="value-prop-list">
+                        <li><i class="fas fa-check"></i> MRP-certified for Joint Base Andrews families</li>
+                        <li><i class="fas fa-check"></i> 2026 BAH maximization strategies</li>
+                        <li><i class="fas fa-check"></i> Remote buying &amp; digital closings</li>
+                        <li><i class="fas fa-check"></i> VA appraisal guidance &amp; bidding-war support</li>
                     </ul>
-                    <a href="/contact" class="text-link" style="margin-top:1rem;display:inline-block">Search 21041 Homes <i class="fas fa-arrow-right"></i></a>
+                    <a href="/maryland-military-relocation" class="text-link">MRP Services <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card">
-                    <div class="card-icon"><i class="fas fa-map-pin"></i></div>
-                    <h3>ZIP 21043 &mdash; Northeast Ellicott City</h3>
-                    <p style="color:var(--color-text-light);margin-bottom:1rem">The most accessible entry point into Howard County. Townhomes, condos, and starter homes make this zip ideal for first-time buyers and military families maximizing BAH.</p>
-                    <ul style="list-style:none;padding:0;font-size:.95rem">
-                        <li style="padding:.4rem 0;border-bottom:1px solid rgba(0,0,0,.06)"><strong>Median Home Price:</strong> $507,450</li>
-                        <li style="padding:.4rem 0;border-bottom:1px solid rgba(0,0,0,.06)"><strong>Active Listings:</strong> ~63</li>
-                        <li style="padding:.4rem 0"><strong>Profile:</strong> Townhomes, starter homes, condos</li>
-                    </ul>
-                    <a href="/contact" class="text-link" style="margin-top:1rem;display:inline-block">Search 21043 Homes <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div style="text-align:center;margin-top:2rem;padding:1.5rem;background:var(--color-cream,#faf8f5);border-radius:12px">
-                <p style="font-size:1.05rem;color:var(--color-text-light)"><strong>Howard County Overall (Ellicott City):</strong> Median home sale price <strong>$637,000</strong> &bull; Year-over-year sales momentum <strong>+2.74%</strong> &bull; Median days on market rising slightly &bull; ~164 active listings across all EC zip codes</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CASE STUDY LINK -->
-    <section class="section bg-cream">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="overline">Recent Success</span>
-                <h2 class="section-title">Sold: $1,175,000 in River Hill, Columbia</h2>
-                <div class="divider-center"></div>
-            </div>
-            <div style="max-width:700px;margin:0 auto;text-align:center">
-                <p style="font-size:1.1rem;color:var(--color-text-light);margin-bottom:1.5rem">A 5BR/4BA Colonial at 6409 Summer Sunrise Dr in the Village of River Hill sold for <strong>$1,175,000</strong> &mdash; $75,000 above the $1,100,000 list price. See the full marketing strategy behind this Howard County luxury sale.</p>
-                <a href="/sold/6409-summer-sunrise-columbia-md" class="btn btn-primary" style="margin-right:1rem">Read the Full Case Study</a>
-                <a href="/sell-with-mitzi" class="btn btn-outline">Selling Services</a>
             </div>
         </div>
     </section>
@@ -309,25 +262,23 @@
     <section class="section">
         <div class="container">
             <div class="text-center" style="max-width:800px;margin:0 auto;">
-                <div style="color:var(--color-gold);font-size:1.5rem;margin-bottom:1rem;">★★★★★</div>
+                <div style="color:var(--color-gold);font-size:1.5rem;margin-bottom:1rem;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 <p style="font-size:1.4rem;font-style:italic;color:var(--color-text);margin-bottom:1.5rem;">
-                    "Mitzi truly goes above and beyond. She works after hours and weekends, handles issues with the
-                    lender and title company, and guides clients through every step of buying or selling. She is kind,
-                    knowledgeable, and easy to work with."
+                    "Mitzi truly goes above and beyond. She works after hours and weekends, handles issues with the lender and title company, and guides clients through every step of buying or selling. She is kind, knowledgeable, and easy to work with."
                 </p>
-                <p style="font-weight:600;color:var(--color-gold);">— Seth Weigel, Howard County Homeowner</p>
+                <p style="font-weight:600;color:var(--color-gold);">— Seth Weigel, Maryland Home Buyer</p>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="section bg-warm">
+    <!-- FINAL CTA -->
+    <section class="section bg-cream">
         <div class="container text-center">
-            <h2 class="section-title">Ready to Buy or Sell in Howard County?</h2>
-            <p style="margin-bottom:2rem;font-size:1.1rem;">Call (443) 900-4056 or send a message — I'd love to help you
-                find your perfect home in Howard County, MD.</p>
-            <a href="https://mitzisantayana.boblucidoteam.com/listing?condition=%7B%22location%22%3A%7B%22county%22%3A%5B%22Howard%2C%20MD%22%5D%7D%7D"
-                class="btn btn-primary" style="margin-right:1rem;">Get a Free Consultation</a>
+            <h2 class="section-title">Ready to Buy or Sell in Bowie, MD?</h2>
+            <p style="margin-bottom:2rem;font-size:1.1rem;">
+                Call or text <strong>(443) 900-4056</strong> today — or fill out the form for a free, no-pressure consultation and home valuation.
+            </p>
+            <a href="/contact" class="btn btn-primary" style="margin-right:1rem;">Get a Free Home Valuation</a>
             <a href="tel:4439004056" class="btn btn-outline">Call Now: 443-900-4056</a>
         </div>
     </section>
@@ -336,18 +287,15 @@
     <div class="call-float" id="callFloat"><i class="fas fa-phone"></i></div>
     <div class="call-modal" id="callModal">
         <div class="call-modal-content">
-            <button class="close-modal" id="closeModal">✕</button>
+            <button class="close-modal" id="closeModal" aria-label="Close modal">&#10005;</button>
             <h2>Do you have questions?</h2>
             <p>Call or text today, we are here to help!</p>
             <a href="tel:4439004056" class="call-btn"><i class="fa fa-phone"></i> 443-900-4056</a>
-            <small>I agree to be contacted by Mitzi Santayana via text, call &amp; email. To opt-out, reply
-                "STOP".</small>
+            <small>I agree to be contacted by Mitzi Santayana via text, call &amp; email. To opt-out, reply "STOP".</small>
         </div>
     </div>
 
     <!-- FOOTER -->
-    <!-- ✅ FOOTER -->
-    <!-- ✅ FOOTER -->
             <div id="footer-static">
         <footer class="footer">
             <!-- TOP CTA AREA -->
@@ -486,5 +434,4 @@
 
     <script src="js/script.js"></script>
 </body>
-
 </html>
